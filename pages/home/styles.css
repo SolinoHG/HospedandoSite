@@ -1,0 +1,241 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Orbitron', sans-serif;
+    min-height:100vh;
+    display:flex;
+    flex-direction:column;
+    color:white;
+    background: radial-gradient(circle at top, #1a1a2e, #0f0f1a);
+    transition: 0.6s ease;
+    overflow-x:hidden;
+}
+
+/* FAZ O CONTEÚDO EMPURRAR O FOOTER */
+.games-container {
+    flex: 1;
+}
+
+/* FUNDO ANIMADO */
+.background-animation{
+    position:fixed;
+    width:200%;
+    height:200%;
+    background: linear-gradient(45deg,#ff00f7,#00f7ff,#00ff88,#ff00f7);
+    animation: rotateBg 15s linear infinite;
+    z-index:-1;
+    opacity:0.08;
+}
+
+@keyframes rotateBg{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+
+/* HEADER */
+.header{
+    text-align:center;
+    padding:50px 20px;
+}
+
+.header h1{
+    font-size:2.5rem;
+    text-shadow:0 0 20px #00f7ff;
+}
+
+.header p{
+    margin:10px 0 25px;
+    color:#ccc;
+}
+
+/* BOTÃO TEMA */
+.theme-btn{
+    padding:12px 25px;
+    border:none;
+    border-radius:50px;
+    background:linear-gradient(45deg,#ff00f7,#00f7ff);
+    color:black;
+    font-weight:bold;
+    cursor:pointer;
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    transition:0.4s;
+    box-shadow:0 0 15px #ff00f7;
+}
+
+.theme-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #00f7ff;
+}
+
+/* GRID */
+.games-container{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    padding:40px;
+}
+
+/* CARD */
+.game-card{
+    background:rgba(255,255,255,0.05);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:20px;
+    text-align:center;
+    transition:0.4s;
+    border:2px solid transparent;
+}
+
+.game-card:hover{
+    transform:translateY(-12px) scale(1.05);
+    border:2px solid #00f7ff;
+    box-shadow:0 0 30px #00f7ff;
+}
+
+.game-card img{
+    width:100%;
+    border-radius:15px;
+    margin-bottom:15px;
+    transition:0.4s;
+}
+
+.game-card:hover img{
+    transform:scale(1.08);
+}
+
+.game-card h2{
+    color:#ff00f7;
+    margin-bottom:10px;
+}
+
+.game-card p{
+    color:#ddd;
+    font-size:0.9rem;
+    margin-bottom:15px;
+}
+
+/* BOTÃO DOWNLOAD */
+.btn-download{
+    display:inline-block;
+    padding:12px 20px;
+    border-radius:30px;
+    background:linear-gradient(45deg,#00f7ff,#ff00f7);
+    color:black;
+    font-weight:bold;
+    text-decoration:none;
+    transition:0.3s;
+}
+
+.btn-download:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 20px #ff00f7;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:20px;
+    background:rgba(0,0,0,0.3);
+}
+
+/* MODO CLARO */
+.light-mode{
+    background:linear-gradient(135deg,#ffffff,#e6f0ff);
+    color:#111;
+}
+
+.light-mode .game-card{
+    background:rgba(0,0,0,0.05);
+}
+
+.light-mode .footer{
+    background:rgba(0,0,0,0.1);
+}
+
+/* AJUSTE TEXTO NO MODO CLARO */
+.light-mode .game-card p{
+    color:#222;
+}
+
+.light-mode .game-card h2{
+    color:#a100a1;
+}
+
+.light-mode .header p{
+    color:#333;
+}
+
+.light-mode .game-card{
+    background: rgba(255,255,255,0.8);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* FUNDO MODO CLARO MELHORADO */
+.light-mode {
+    background: linear-gradient(135deg, #f5f7ff, #ffeaff);
+    color: #111;
+}
+
+.light-mode .header {
+    background: rgba(255,255,255,0.6);
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #ff00c8;
+}
+
+.light-mode .game-card {
+    background: rgba(255,255,255,0.9);
+    border: 1px solid rgba(255,0,200,0.2);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.light-mode .game-card:hover {
+    transform: translateY(-8px) scale(1.03);
+    box-shadow: 0 20px 45px rgba(255,0,200,0.25);
+}
+
+.light-mode .game-card h2 {
+    background: linear-gradient(90deg, #ff00c8, #6a00ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.light-mode .game-card button {
+    background: linear-gradient(90deg, #ff00c8, #6a00ff);
+    border: none;
+    color: white;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.light-mode .game-card button:hover {
+    transform: scale(1.08);
+    box-shadow: 0 10px 25px rgba(106,0,255,0.4);
+}
+
+body {
+    cursor: url("../../public/assets/images/cursor.png"), auto;
+}
+
+button, a {
+    cursor: url("../../public/assets/images/cursor.png"), pointer;
+}
+
+
+/* RESPONSIVO */
+@media(max-width:768px){
+    .header h1{
+        font-size:1.8rem;
+    }
+
+    .games-container{
+        padding:20px;
+    }
+}
