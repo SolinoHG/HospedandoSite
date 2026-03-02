@@ -221,11 +221,11 @@ body{
 }
 
 body {
-    cursor: url("../../public/assets/images/cursor.png"), auto;
+    cursor: url("public/assets/images/cursor.png"), auto;
 }
 
 button, a {
-    cursor: url("../../public/assets/images/cursor.png"), pointer;
+    cursor: url("public/assets/images/cursor.png"), pointer;
 }
 
 
