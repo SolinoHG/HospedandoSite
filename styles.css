@@ -98,11 +98,12 @@ body{
     box-shadow:0 0 30px #00f7ff;
 }
 
-.game-card img{
-    width:100%;
-    border-radius:15px;
-    margin-bottom:15px;
-    transition:0.4s;
+.game-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .game-card:hover img{
@@ -226,6 +227,164 @@ body {
 
 button, a {
     cursor: url("public/assets/images/cursor.png"), pointer;
+}
+
+/* CONTROLES */
+.controls {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#searchInput {
+    padding: 12px 20px;
+    width: 280px;
+    border-radius: 30px;
+    border: none;
+    outline: none;
+    margin-bottom: 15px;
+    font-family: 'Orbitron';
+}
+
+/* BOTÕES FILTRO */
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.filter-btn {
+    padding: 8px 15px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    background: rgba(255,255,255,0.1);
+    color: white;
+    transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background: linear-gradient(45deg,#ff00f7,#00f7ff);
+    color: black;
+}
+
+/* AVALIAÇÃO */
+.rating {
+    margin: 8px 0;
+    font-size: 1.1rem;
+    color: gold;
+}
+
+/* AVALIAÇÃO CLICÁVEL */
+.rating {
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 0;
+}
+
+.star {
+    font-size: 22px;
+    cursor: pointer;
+    color: gray;
+    transition: 0.2s;
+}
+
+.star.active {
+    color: gold;
+}
+
+.star:hover {
+    transform: scale(1.2);
+}
+
+.game-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 520px;
+}
+
+.light-mode #searchInput {
+    background: white;
+    color: black;
+}
+
+/* ========================= */
+/* CORREÇÃO BOTÕES MODO CLARO */
+/* ========================= */
+
+.light-mode .filter-btn {
+    background: #e0e0e0;
+    color: #222; /* texto escuro */
+}
+
+.light-mode .filter-btn:hover {
+    background: #d0d0d0;
+    color: #000;
+}
+
+.light-mode .filter-btn.active {
+    background: linear-gradient(45deg, #a855f7, #3b82f6);
+    color: white; /* ativo continua branco porque o fundo é escuro */
+}
+
+.light-mode {
+    background: linear-gradient(135deg, #f4f6f9, #dde3ea);
+    color: #222;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 15px;
+    transition: 0.3s ease; /* animação suave */
+}
+
+.card img:hover {
+    transform: scale(1.05); /* aumenta levemente */
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.card {
+    background-color: #1e1e1e; /* exemplo */
+    border-radius: 20px;
+    overflow: hidden; /* importante para não vazar a imagem */
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px); /* sobe o card */
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.4);
+}
+
+.game-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    z-index: 0;
+}
+
+/* Camada da banana escondida */
+.game-card::before {
+    content: "";
+    position: absolute;
+    inset: -4px;
+    border-radius: 24px;
+
+    background: url("/public/assets/gifs/banana.gif") center/cover no-repeat;
+
+    opacity: 0;
+    transition: opacity 0.3s ease;
+
+    z-index: -1;
+}
+
+/* Aparece no hover */
+.game-card:hover::before {
+    opacity: 0.6;
+filter: blur(1px);
 }
 
 
