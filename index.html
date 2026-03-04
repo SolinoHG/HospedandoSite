@@ -14,6 +14,21 @@
 
 <body>
 
+<div id="arcade-loader">
+  <div class="loader-content">
+    <h1>HEGUEZONE</h1>
+    <p class="loading-text">LOADING...</p>
+    <div class="loading-bar">
+      <div class="loading-fill"></div>
+    </div>
+    <p class="press-start">PRESS START</p>
+  </div>
+</div>
+
+<audio id="start-sound">
+  <source src="public/assets/audios/AAAANAOACHOAUDIO" type="audio/mpeg">
+</audio>
+
 <div class="background-animation"></div>
 
 <header class="header">
@@ -23,7 +38,22 @@
         <span class="icon">🌙</span>
         <span class="text">Modo Escuro</span>
     </button>
+
+    <button id="music-toggle" class="mario-block">
+  <span id="block-icon">?</span>
+</button>
+
+<audio id="bg-music" loop>
+  <source src="public/assets/audios/backmusic.mp3" type="audio/mpeg">
+</audio>
+
+<audio id="coin-sound">
+  <source src="public/assets/audios/musiccoin.mp3" type="audio/mpeg">
+</audio>
+
 </header>
+
+
 
 <section class="controls">
 
@@ -556,6 +586,120 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+</script>
+
+<script>
+  const musicBtn = document.getElementById("music-toggle");
+  const music = document.getElementById("bg-music");
+  const coinSound = document.getElementById("coin-sound");
+  const icon = document.getElementById("block-icon");
+
+  music.volume = 0.3;
+  coinSound.volume = 0.5;
+
+  function createCoin() {
+    const coin = document.createElement("div");
+    coin.classList.add("coin");
+    coin.innerText = "🪙";
+    musicBtn.appendChild(coin);
+
+    setTimeout(() => {
+      coin.remove();
+    }, 800);
+  }
+
+  function createParticles() {
+    for (let i = 0; i < 6; i++) {
+      const particle = document.createElement("div");
+      particle.classList.add("particle");
+
+      const x = (Math.random() - 0.5) * 60 + "px";
+      const y = (Math.random() - 0.5) * 60 + "px";
+
+      particle.style.setProperty("--x", x);
+      particle.style.setProperty("--y", y);
+
+      musicBtn.appendChild(particle);
+
+      setTimeout(() => {
+        particle.remove();
+      }, 600);
+    }
+  }
+
+  musicBtn.addEventListener("click", () => {
+    createCoin();
+    createParticles();
+    coinSound.currentTime = 0;
+    coinSound.play();
+
+    if (music.paused) {
+      music.play();
+      musicBtn.classList.add("active");
+      icon.innerText = "♪";
+    } else {
+      music.pause();
+      musicBtn.classList.remove("active");
+      icon.innerText = "?";
+    }
+  });
+</script>
+
+<script>
+  const loader = document.getElementById("arcade-loader");
+  const fill = document.querySelector(".loading-fill");
+  const startSound = document.getElementById("start-sound");
+  const pressStart = document.querySelector(".press-start");
+  const loaderContent = document.querySelector(".loader-content");
+
+  window.addEventListener("load", () => {
+    fill.style.width = "100%";
+  });
+
+  pressStart.addEventListener("click", () => {
+    startSound.play();
+
+    // adiciona glitch
+    loaderContent.classList.add("glitch-effect");
+
+    setTimeout(() => {
+      loader.classList.add("loader-hidden");
+    }, 400);
+  });
+</script>
+
+<script>
+  const secretWord = "wasd";
+  let typed = "";
+
+  document.addEventListener("keydown", (e) => {
+    // ignorar se estiver digitando em input
+    if (e.target.tagName === "INPUT" || e.target.tagName === "TEXTAREA") return;
+
+    typed += e.key.toLowerCase();
+
+    if (typed.length > secretWord.length) {
+      typed = typed.slice(-secretWord.length);
+    }
+
+    if (typed === secretWord) {
+      activateSecretMode();
+      typed = "";
+    }
+  });
+
+  function activateSecretMode() {
+    document.body.classList.toggle("secret-mode");
+
+    const message = document.createElement("div");
+    message.innerText = "⚡ WASD MODE ACTIVATED ⚡";
+    message.classList.add("secret-message");
+    document.body.appendChild(message);
+
+    setTimeout(() => {
+      message.remove();
+    }, 3000);
+  }
 </script>
 
 </body>

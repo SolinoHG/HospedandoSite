@@ -387,6 +387,291 @@ button, a {
 filter: blur(1px);
 }
 
+.mario-block {
+  width: 55px;
+  height: 55px;
+  background: linear-gradient(#ffd84d, #f4b400);
+  border: 4px solid #c97e00;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  font-size: 28px;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 2px 2px 0 #c97e00;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.15s ease, box-shadow 0.2s ease;
+  box-shadow: 0 6px 0 #c97e00;
+}
+
+/* Brilho animado */
+.mario-block::before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  width: 10px;
+  height: 20px;
+  background: rgba(255,255,255,0.4);
+  transform: rotate(20deg);
+  border-radius: 4px;
+}
+
+/* Hover */
+.mario-block:hover {
+  transform: translateY(-5px);
+}
+
+/* Clique efeito “pulo” */
+.mario-block:active {
+  transform: translateY(2px);
+  box-shadow: 0 3px 0 #c97e00;
+}
+
+/* Quando música estiver ativa */
+.mario-block.active {
+  box-shadow: 0 0 15px #ffd84d, 0 6px 0 #c97e00;
+}
+
+.coin {
+  position: absolute;
+  top: -5px;
+  font-size: 22px;
+  animation: coinJump 0.8s ease forwards;
+  pointer-events: none;
+}
+
+@keyframes coinJump {
+  0% {
+    transform: translateY(0) rotateY(0deg) scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(-45px) rotateY(360deg) scale(1.3);
+  }
+  100% {
+    transform: translateY(-75px) rotateY(720deg) scale(0.8);
+    opacity: 0;
+  }
+}
+
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: gold;
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkle 0.6s ease forwards;
+}
+
+@keyframes sparkle {
+  0% {
+    opacity: 1;
+    transform: translate(0, 0) scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: translate(var(--x), var(--y)) scale(0.5);
+  }
+}
+
+#arcade-loader {
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle, #111 0%, #000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  color: #00ffcc;
+  font-family: monospace;
+  text-align: center;
+  transition: opacity 0.6s ease, visibility 0.6s;
+}
+
+.loader-content h1 {
+  font-size: 42px;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #00ffcc;
+}
+
+.loading-text {
+  margin-bottom: 10px;
+}
+
+.loading-bar {
+  width: 250px;
+  height: 20px;
+  border: 3px solid #00ffcc;
+  margin: 10px auto;
+  overflow: hidden;
+}
+
+.loading-fill {
+  height: 100%;
+  width: 0%;
+  background: #00ffcc;
+  transition: width 2s linear;
+}
+
+.press-start {
+  margin-top: 15px;
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+.loader-hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#arcade-loader::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(0,255,200,0.05),
+    rgba(0,255,200,0.05) 2px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+}
+
+@keyframes powerOn {
+  0% {
+    transform: scaleY(0.01);
+    opacity: 0;
+  }
+  40% {
+    transform: scaleY(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+#arcade-loader {
+  animation: powerOn 0.5s ease-out;
+}
+
+.press-start {
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+.press-start:hover {
+  transform: scale(1.1);
+  text-shadow: 0 0 15px #00ffcc;
+}
+
+/* Glitch RGB */
+.glitch-effect {
+  animation: glitch 0.4s ease;
+}
+
+@keyframes glitch {
+  0% {
+    text-shadow: 
+      2px 0 red,
+      -2px 0 cyan;
+  }
+  20% {
+    text-shadow: 
+      -2px 0 red,
+      2px 0 cyan;
+  }
+  40% {
+    text-shadow: 
+      2px 2px red,
+      -2px -2px cyan;
+  }
+  60% {
+    text-shadow: 
+      -2px -2px red,
+      2px 2px cyan;
+  }
+  100% {
+    text-shadow: none;
+  }
+}
+
+/* SECRET MODE */
+.secret-mode {
+  animation: secretFlash 0.5s ease;
+  background: radial-gradient(circle, #1a001a, #000);
+}
+
+@keyframes secretFlash {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(90deg); }
+}
+
+/* Texto secreto */
+.secret-message {
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 32px;
+  font-weight: bold;
+  color: #ff00ff;
+  text-shadow: 0 0 15px #ff00ff;
+  z-index: 9999;
+  animation: fadeSecret 3s ease forwards;
+}
+
+@keyframes fadeSecret {
+  0% { opacity: 0; transform: translate(-50%, -20px); }
+  20% { opacity: 1; transform: translate(-50%, 0); }
+  80% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* ========================= */
+/* MODO SECRETO + MODO CLARO */
+/* ========================= */
+
+.light-mode.secret-mode {
+  background: linear-gradient(135deg, #fdfbff, #e6f7ff);
+  animation: lightSecretPulse 2s infinite alternate;
+}
+
+.light-mode.secret-mode .game-card {
+  background: white;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+  border: 2px solid rgba(0, 255, 255, 0.3);
+}
+
+.light-mode.secret-mode h1,
+.light-mode.secret-mode h2,
+.light-mode.secret-mode h3 {
+  color: #00bcd4;
+  text-shadow: 0 0 8px rgba(0, 255, 255, 0.5);
+}
+
+.light-mode.secret-mode .download-btn {
+  background: linear-gradient(45deg, #00e5ff, #ff00ff);
+  box-shadow: 0 0 15px rgba(255, 0, 255, 0.6);
+}
+
+@keyframes lightSecretPulse {
+  0% {
+    filter: hue-rotate(0deg) brightness(1);
+  }
+  100% {
+    filter: hue-rotate(40deg) brightness(1.05);
+  }
+}
+
 
 /* RESPONSIVO */
 @media(max-width:768px){
