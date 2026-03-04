@@ -373,7 +373,7 @@ button, a {
     inset: -4px;
     border-radius: 24px;
 
-    background: url("/public/assets/gifs/banana.gif") center/cover no-repeat;
+    background: url("./public/assets/gifs/banana.gif") center/cover no-repeat;
 
     opacity: 0;
     transition: opacity 0.3s ease;
