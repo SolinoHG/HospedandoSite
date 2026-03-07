@@ -1,0 +1,327 @@
+/* RESET */
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+
+/* FUNDO DO SITE */
+
+body{
+
+background:
+radial-gradient(circle at 20% 20%, rgba(0,255,255,0.15), transparent 40%),
+radial-gradient(circle at 80% 0%, rgba(138,43,226,0.15), transparent 40%),
+radial-gradient(circle at 0% 100%, rgba(0,255,136,0.12), transparent 40%),
+#020617;
+
+color:white;
+padding:40px;
+
+overflow-x:hidden;
+
+}
+
+
+/* TITULO DA PAGINA */
+
+.topo{
+    text-align:center;
+    padding:50px 20px;
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.topo h1{
+    font-size:2.5rem;
+    text-shadow:0 0 20px #00f7ff;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.topo{
+    margin:10px 0 25px;
+    color:#ccc;
+}
+
+@keyframes brilhoTitulo{
+
+0%{
+filter: drop-shadow(0 0 5px #ff00c8);
+}
+
+50%{
+filter: drop-shadow(0 0 12px #6a00ff);
+}
+
+100%{
+filter: drop-shadow(0 0 18px #00e5ff);
+}
+
+}
+
+
+
+/* CARD DO JOGO */
+
+.game{
+
+max-width:900px;
+margin:auto;
+margin-bottom:80px;
+
+background: rgba(10,15,35,0.8);
+
+border-radius:15px;
+
+padding:25px;
+
+box-shadow:0 0 20px rgba(0,200,255,0.15);
+
+transition:0.4s;
+
+}
+
+
+/* EFEITO HOVER */
+
+.game:hover{
+
+transform:scale(1.02);
+
+box-shadow:
+
+0 0 20px #00e5ff,
+0 0 40px #8a2be2;
+
+}
+
+
+/* BANNER */
+
+.banner{
+
+width:100%;
+
+border-radius:10px;
+
+margin-bottom:15px;
+
+object-fit:cover;
+
+}
+
+.background-animation{
+    position:fixed;
+    width:200%;
+    height:200%;
+    background: linear-gradient(45deg,#ff00f7,#00f7ff,#00ff88,#ff00f7);
+    animation: rotateBg 15s linear infinite;
+    z-index:-1;
+    opacity:0.08;
+}
+
+@keyframes rotateBg{
+    0%{ transform: rotate(0deg); }
+    100%{ transform: rotate(360deg); }
+}
+
+
+
+/* TITULO DO JOGO */
+
+.game h2{
+
+font-size:28px;
+
+margin-bottom:20px;
+
+color:#00e5ff;
+
+}
+
+
+/* TRAILER */
+
+.trailer iframe{
+
+width:100%;
+height:400px;
+
+border-radius:10px;
+
+margin-bottom:15px;
+
+}
+
+
+/* DESCRIÇÃO */
+
+.descricao{
+
+margin-bottom:20px;
+
+line-height:1.6;
+
+color:#d6d6d6;
+
+}
+
+
+/* ESPECIFICAÇÕES */
+
+.specs{
+
+background:#020617;
+
+padding:15px;
+
+border-radius:10px;
+
+margin-bottom:20px;
+
+list-style:none;
+
+}
+
+.specs li{
+
+margin-bottom:6px;
+
+color:#9ddcff;
+
+}
+
+
+/* BOTAO DOWNLOAD */
+
+.download{
+
+display:inline-block;
+
+padding:12px 30px;
+
+border-radius:30px;
+
+background:linear-gradient(90deg,#00e5ff,#8a2be2);
+
+text-decoration:none;
+
+color:white;
+
+font-weight:bold;
+
+transition:0.3s;
+
+}
+
+body{
+cursor: url("./public/assets/images/cursor.png"), auto;
+}
+
+a, button{
+cursor: url("./public/assets/images/cursor.png"), pointer;
+}
+
+
+/* HOVER BOTAO */
+
+.download:hover{
+
+transform:scale(1.1);
+
+box-shadow:
+
+0 0 10px #00e5ff,
+0 0 20px #8a2be2;
+
+}
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background-image:
+
+radial-gradient(#00e5ff 1px, transparent 1px),
+radial-gradient(#8a2be2 1px, transparent 1px),
+radial-gradient(#00ff88 1px, transparent 1px);
+
+background-size:120px 120px, 180px 180px, 240px 240px;
+
+opacity:0.15;
+
+animation:starsMove 60s linear infinite;
+
+z-index:-2;
+
+}
+
+@keyframes starsMove{
+
+0%{
+transform:translateY(0);
+}
+
+100%{
+transform:translateY(-1000px);
+}
+
+}
+
+body::after{
+
+content:"";
+
+position:fixed;
+
+top:-50%;
+left:-50%;
+
+width:200%;
+height:200%;
+
+background: radial-gradient(circle,#00e5ff20,transparent 60%);
+
+animation:pulseBg 8s ease-in-out infinite;
+
+z-index:-3;
+
+}
+
+@keyframes pulseBg{
+
+0%{opacity:0.3; transform:scale(1);}
+50%{opacity:0.6; transform:scale(1.1);}
+100%{opacity:0.3; transform:scale(1);}
+
+}
+
+
+/* RESPONSIVO */
+
+@media(max-width:900px){
+
+.trailer iframe{
+
+height:250px;
+
+}
+
+body{
+
+padding:20px;
+
+}
+
+}
