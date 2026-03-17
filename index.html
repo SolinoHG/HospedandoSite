@@ -495,6 +495,29 @@
 
 </section>
 
+<!-- Ícone do Freddy (Easter Egg) -->
+<div id="freddy-icon" title="Não clique...">
+  <img src="./public/assets/images/fnaf2.png" id="freddy-icon">
+
+  <img src="./public/assets/images/freddy.png" id="flash-freddy">
+
+</div>
+
+<!-- Overlay do jumpscare -->
+<div id="jumpscare-overlay">
+  <div id="jumpscare-container">
+    <iframe 
+      id="jumpscare-video"
+      src=""
+      frameborder="0"
+      allow="autoplay; fullscreen"
+      allowfullscreen>
+    </iframe>
+
+    <button id="close-jumpscare">✖</button>
+  </div>
+</div>
+
 <script>
 
 document.querySelectorAll(".rating").forEach(rating => {
@@ -728,6 +751,67 @@ document.addEventListener("DOMContentLoaded", () => {
       message.remove();
     }, 3000);
   }
+</script>
+
+<script>
+const freddy = document.getElementById("freddy-icon");
+const overlay = document.getElementById("jumpscare-overlay");
+const video = document.getElementById("jumpscare-video");
+const closeBtn = document.getElementById("close-jumpscare");
+
+const jumpscareURL = "https://www.youtube.com/embed/r11mz5jvHaU";
+
+// som de estática (opcional)
+const audio = new Audio("https://www.myinstants.com/media/sounds/tv-static.mp3");
+
+freddy.addEventListener("click", () => {
+
+    const flash = document.getElementById("flash-freddy");
+
+freddy.addEventListener("click", () => {
+  overlay.style.display = "flex";
+  overlay.classList.add("glitch");
+
+  audio.play();
+
+  // aparece rapidão (efeito FNAF 👀)
+  flash.style.opacity = "1";
+
+  setTimeout(() => {
+    flash.style.opacity = "0";
+  }, 200);
+
+  setTimeout(() => {
+    overlay.classList.remove("glitch");
+    video.src = jumpscareURL;
+  }, 1200);
+});
+  
+  overlay.style.display = "flex";
+
+  // efeito glitch antes
+  overlay.classList.add("glitch");
+
+  audio.play();
+
+  setTimeout(() => {
+    overlay.classList.remove("glitch");
+    video.src = jumpscareURL;
+  }, 1200); // 👈 delay cria tensão
+});
+
+closeBtn.addEventListener("click", closeJumpscare);
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeJumpscare();
+});
+
+function closeJumpscare() {
+  overlay.style.display = "none";
+  video.src = "";
+  audio.pause();
+  audio.currentTime = 0;
+}
 </script>
 
 </body>

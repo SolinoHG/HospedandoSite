@@ -731,6 +731,141 @@ body.light-mode .btn-details:hover{
     left:100%;
 }
 
+/* Ícone do Freddy */
+#freddy-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 999;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 10px #ff00ff);
+}
+
+#freddy-icon:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 20px red);
+}
+
+/* Overlay do jumpscare */
+#jumpscare-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Container do vídeo */
+#jumpscare-container {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+}
+
+/* Vídeo */
+#jumpscare-video {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+/* Botão fechar */
+#close-jumpscare {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: red;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Ícone do Freddy (menor e mais escondido) */
+#freddy-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px; /* 👈 menor */
+  opacity: 0.7;
+  cursor: pointer;
+  z-index: 999;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 6px purple);
+}
+
+#freddy-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px red);
+}
+
+/* Overlay */
+#jumpscare-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Tela piscando antes do jumpscare */
+.glitch {
+  animation: glitch 0.2s infinite;
+}
+
+@keyframes glitch {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(3) contrast(2); }
+  100% { filter: brightness(1); }
+}
+
+/* Vídeo */
+#jumpscare-video {
+  width: 80%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 10px;
+}
+
+/* Botão fechar */
+#close-jumpscare {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: red;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#flash-freddy {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  opacity: 0;
+  z-index: 10000;
+  pointer-events: none;
+}
+
 /* RESPONSIVO */
 @media(max-width:768px){
     .header h1{
