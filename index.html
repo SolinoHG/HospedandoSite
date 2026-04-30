@@ -39,6 +39,7 @@
         <span class="text">Modo Escuro</span>
     </button>
 
+
     <button id="music-toggle" class="mario-block">
   <span id="block-icon">?</span>
 </button>
@@ -53,6 +54,25 @@
 
 </header>
 
+<div class="hero-card">
+
+    <div class="hero-slider">
+        <img src="https://i.ytimg.com/vi/wKBV2V6meUQ/maxresdefault.jpg" class="hero-slide active" class="hero-slide active" alt="">
+        <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjxf_k8YnuP5SVYiYGF3wWGNegWWNF_MXy69ScmkUclvuExcQy7RGbL-48Ky8jG4o4ZsOc7j5BIqFdsBXfaoGIZ7aTa0_LlvxZPoLY25GwrixLQz0XwNSguM03rDNctI9Ffn-qHL9eslhqDYlP-K8U9HD5VYRgVI9kWjt1HJ3Y6z5zoHtzURRNYWd8d0Q/s1920/GQ_Best_Video_Games_of_All_Time.jpg" class="hero-slide" alt="">
+        <img src="https://i.gruposwhats.app/grupo-de-whatsapp-fnaf-654818ff89640.webp" class="hero-slide" alt="">
+    </div>
+
+    <div class="hero-mini-caption">
+        <h3 id="heroTitle">🎮 SNES Retro Collection</h3>
+        <p id="heroDesc">Reviva a era dourada dos consoles com centenas de clássicos em um pack único.</p>
+
+        <div class="hero-action-buttons">
+            <a href="https://www.mediafire.com/file/zs6f1d58hd027es/PC_ClassicMini_SNES_800_jogos!_CONFIGURADO.rar/file" class="hero-download-btn">⬇ BAIXAR AGORA</a>
+            <a href="#" class="hero-info-btn">DETALHES</a>
+        </div>
+    </div>
+
+</div>
 
 
 <section class="controls">
@@ -728,6 +748,40 @@ document.addEventListener("DOMContentLoaded", () => {
       message.remove();
     }, 3000);
   }
+</script>
+
+<script>
+const slides = document.querySelectorAll(".hero-slide");
+const heroTitle = document.getElementById("heroTitle");
+const heroDesc = document.getElementById("heroDesc");
+
+const heroData = [
+    {
+        title:"🎮 SNES Retro Collection",
+        desc:"Reviva a era dourada dos consoles com centenas de clássicos em um pack único."
+    },
+    {
+        title:"⚔️ God Collection Pack",
+        desc:"Ação brutal e aventuras épicas com os maiores jogos de guerra e mitologia."
+    },
+    {
+        title:"👻 Horror Nightmare Pack",
+        desc:"Os jogos mais sombrios e aterrorizantes reunidos em uma coleção insana."
+    }
+];
+
+let currentHero = 0;
+
+setInterval(()=>{
+    slides[currentHero].classList.remove("active");
+
+    currentHero = (currentHero + 1) % slides.length;
+
+    slides[currentHero].classList.add("active");
+    heroTitle.innerHTML = heroData[currentHero].title;
+    heroDesc.innerHTML = heroData[currentHero].desc;
+
+},4000);
 </script>
 
 </body>
