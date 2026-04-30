@@ -671,7 +671,200 @@ filter: blur(1px);
     filter: hue-rotate(40deg) brightness(1.05);
   }
 }
-S
+
+/* BOTÃO DETALHES */
+
+.btn-details{
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 18px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* MODO ESCURO */
+body:not(.light-mode) .btn-details{
+    background: linear-gradient(45deg,#7a00ff,#ff00cc);
+    color: white;
+    box-shadow: 0 0 10px #a200ff;
+}
+
+/* HOVER ESCURO */
+body:not(.light-mode) .btn-details:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 20px #ff00cc;
+}
+
+
+/* MODO CLARO */
+body.light-mode .btn-details{
+    background: linear-gradient(45deg,#008cff,#00e1ff);
+    color: white;
+    box-shadow: 0 0 8px #0099ff;
+}
+
+/* HOVER CLARO */
+body.light-mode .btn-details:hover{
+    transform: translateY(-3px) scale(1.05);
+    box-shadow: 0 0 18px #00c3ff;
+}
+
+
+/* EFEITO BRILHO */
+.btn-details::after{
+    content:"";
+    position:absolute;
+    top:0;
+    left:-100%;
+    width:100%;
+    height:100%;
+    background:linear-gradient(120deg,transparent,rgba(255,255,255,0.4),transparent);
+    transition:0.5s;
+}
+
+.btn-details:hover::after{
+    left:100%;
+}
+
+/* Ícone do Freddy */
+#freddy-icon {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  font-size: 32px;
+  cursor: pointer;
+  z-index: 999;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 10px #ff00ff);
+}
+
+#freddy-icon:hover {
+  transform: scale(1.2) rotate(5deg);
+  filter: drop-shadow(0 0 20px red);
+}
+
+/* Overlay do jumpscare */
+#jumpscare-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Container do vídeo */
+#jumpscare-container {
+  position: relative;
+  width: 80%;
+  max-width: 900px;
+}
+
+/* Vídeo */
+#jumpscare-video {
+  width: 100%;
+  height: 500px;
+  border-radius: 10px;
+}
+
+/* Botão fechar */
+#close-jumpscare {
+  position: absolute;
+  top: -40px;
+  right: 0;
+  background: red;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 5px 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Ícone do Freddy (menor e mais escondido) */
+#freddy-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 55px; /* 👈 menor */
+  opacity: 0.7;
+  cursor: pointer;
+  z-index: 999;
+  transition: 0.3s;
+  filter: drop-shadow(0 0 6px purple);
+}
+
+#freddy-icon:hover {
+  opacity: 1;
+  transform: scale(1.1);
+  filter: drop-shadow(0 0 12px red);
+}
+
+/* Overlay */
+#jumpscare-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+/* Tela piscando antes do jumpscare */
+.glitch {
+  animation: glitch 0.2s infinite;
+}
+
+@keyframes glitch {
+  0% { filter: brightness(1); }
+  50% { filter: brightness(3) contrast(2); }
+  100% { filter: brightness(1); }
+}
+
+/* Vídeo */
+#jumpscare-video {
+  width: 80%;
+  max-width: 800px;
+  height: 450px;
+  border-radius: 10px;
+}
+
+/* Botão fechar */
+#close-jumpscare {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: red;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+
+#flash-freddy {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  opacity: 0;
+  z-index: 10000;
+  pointer-events: none;
+}
 
 /* ================= HERO CARD CARROSSEL ================= */
 
