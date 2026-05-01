@@ -1,902 +1,383 @@
 <!DOCTYPE html>
+
 <html lang="pt-BR">
-
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
 <title>HegueZone - Jogos</title>
-
-<link rel="icon" type="image/png" href="public/assets/images/favicon2.ico">
-
+<link rel="icon" type="image/png" href="public/assets/images/favicon3.ico">
 <link rel="stylesheet" href="game.css">
-
 </head>
-
 <body>
 
 <nav class="steam-menu">
-
-<div class="logo">🎮 HegueZone</div>
-
-<div class="search-box">
-
-<input type="text" id="searchInput" placeholder="Pesquisar jogos...">
-
-</div>
-
-<ul>
-
-<li><a href="index.html">Home</a></li>
-
-<li><a href="snake.html">Jogos</a></li>
-
-<li><a href="#">Populares</a></li>
-
-<li><a href="#">Novidades</a></li>
-
-</ul>
-
+    <div class="logo">🎮 HegueZone</div>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Pesquisar jogos...">
+    </div>
+    <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="snake.html">Jogos</a></li>
+        <li><a href="#">Populares</a></li>
+        <li><a href="#">Novidades</a></li>
+    </ul>
 </nav>
 
-<header class="topo">
-<h1>🎮 HegueZone 🎮</h1>
+<header class="hero-topo">
+    <h1>CATÁLOGO HEGUEZONE</h1>
+    <p>Jogos adquiridos de maneiras extremamente duvidosas</p>
 </header>
 
-<a href="index.html" class="btn-voltar">⬅ Voltar para Home</a>
+<section class="games-container">
 
+<!-- MODELO NOVO VISUAL CARD -->
 
-
-<!-- UNDERTALE -->
-
-<section class="game" id="undertale">
-
-<img class="banner" src="https://p4.wallpaperbetter.com/wallpaper/86/954/557/video-game-undertale-papyrus-undertale-sans-undertale-wallpaper-preview.jpg">
-
-<h2>Undertale PT-BR</h2>
-
-
-<div class="trailer">
-<iframe
-src="https://www.youtube.com/embed/0xoxnPUpKuQ"
-allowfullscreen>
-</iframe>
-</div>
-
-<p class="descricao">
-Um RPG único onde suas escolhas mudam completamente a história.
-</p>
-
-<ul class="specs">
-
-<li>CPU: Dual Core</li>
-<li>RAM: 2GB</li>
-<li>GPU: Integrada</li>
-<li>Armazenamento: 200MB</li>
-
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/rwb1aeauofyd4w7/Undertale++PT-BR+v1.001.rar">⬇ DOWNLOAD</a>
-
+<section class="game-card" id="undertale">
+    <div class="game-thumb">
+        <img src="https://p4.wallpaperbetter.com/wallpaper/86/954/557/video-game-undertale-papyrus-undertale-sans-undertale-wallpaper-preview.jpg">
+    </div>
+    <div class="game-info">
+        <h2>Undertale PT-BR</h2>
+        <p>Um RPG único onde suas escolhas mudam completamente a história.</p>
+        <div class="spec-grid">
+            <span>CPU: Dual Core</span>
+            <span>RAM: 2GB</span>
+            <span>GPU: Integrada</span>
+            <span>Armazenamento: 200MB</span>
+        </div>
+        <div class="buttons-area">
+            <a class="watch-btn" href="https://www.youtube.com/watch?v=0xoxnPUpKuQ" target="_blank">▶ Trailer</a>
+            <a class="download-btn" href="https://www.mediafire.com/file/rwb1aeauofyd4w7/Undertale++PT-BR+v1.001.rar">⬇ Download</a>
+        </div>
+    </div>
 </section>
 
-<!-- MI SIDE -->
-
-<section class="game" id="miside">
-
-<img class="banner" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4m31IMvHS3L3-p2gIeGzq8O324nfDiyqbgA&s">
-
-<h2>Mi Side PT-BR</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/JxeST9Bv4W0" allowfullscreen></iframe>
-</div>
-
-<p class="descricao">
-Um jogo de terror psicológico onde realidade e jogo começam a se misturar.
-</p>
-
-<ul class="specs">
-<li>CPU: i3</li>
-<li>RAM: 4GB</li>
-<li>GPU: GTX 750</li>
-<li>Armazenamento: 5GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/mzpfjlbwfcshcfj/MiSide.zip/file">⬇ DOWNLOAD</a>
-
+<section class="game-card" id="miside">
+    <div class="game-thumb">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4m31IMvHS3L3-p2gIeGzq8O324nfDiyqbgA&s">
+    </div>
+    <div class="game-info">
+        <h2>Mi Side PT-BR</h2>
+        <p>Terror psicológico onde realidade e jogo começam a se misturar.</p>
+        <div class="spec-grid">
+            <span>CPU: i3</span>
+            <span>RAM: 4GB</span>
+            <span>GPU: GTX 750</span>
+            <span>Armazenamento: 5GB</span>
+        </div>
+        <div class="buttons-area">
+            <a class="watch-btn" href="https://www.youtube.com/watch?v=JxeST9Bv4W0" target="_blank">▶ Trailer</a>
+            <a class="download-btn" href="https://www.mediafire.com/file/mzpfjlbwfcshcfj/MiSide.zip/file">⬇ Download</a>
+        </div>
+    </div>
 </section>
 
-
-
-<!-- CRASH 4 -->
-
-<section class="game" id="crash4">
-
-<img class="banner" src="https://revolutionarena.com/pt-br/wp-content/uploads/sites/2/2021/05/Crash-Bandicoot-4-Its-About-Time.jpg">
-
-<h2>Crash Bandicoot 4 PT-BR</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/U1qGQqOkZI8" allowfullscreen></iframe>
-</div>
-
-<p class="descricao">
-Crash e Coco enfrentam novos desafios viajando por dimensões.
-</p>
-
-<ul class="specs">
-<li>CPU: i3</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 970</li>
-<li>Armazenamento: 30GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=1rAjOHGJpSqcDAehSX-Yz-eKTBszVLyh7&export=download&authuser=0">⬇ DOWNLOAD</a>
-
+<section class="game-card" id="crash4">
+    <div class="game-thumb">
+        <img src="https://revolutionarena.com/pt-br/wp-content/uploads/sites/2/2021/05/Crash-Bandicoot-4-Its-About-Time.jpg">
+    </div>
+    <div class="game-info">
+        <h2>Crash Bandicoot 4</h2>
+        <p>Crash e Coco enfrentam novos desafios viajando por dimensões.</p>
+        <div class="spec-grid">
+            <span>CPU: i3</span>
+            <span>RAM: 8GB</span>
+            <span>GPU: GTX 970</span>
+            <span>Armazenamento: 30GB</span>
+        </div>
+        <div class="buttons-area">
+            <a class="watch-btn" href="https://www.youtube.com/watch?v=U1qGQqOkZI8" target="_blank">▶ Trailer</a>
+            <a class="download-btn" href="https://drive.usercontent.google.com/download?id=1rAjOHGJpSqcDAehSX-Yz-eKTBszVLyh7&export=download&authuser=0">⬇ Download</a>
+        </div>
+    </div>
 </section>
 
 
-
-<!-- FORZA -->
-
-<section class="game" id="forza3">
-
-<img class="banner" src="https://gaming-cdn.com/images/products/7626/orig/forza-horizon-3-ultimate-edition-ultimate-edition-pc-xbox-one-jogo-microsoft-store-cover.jpg?v=1738681403">
-
+<section class="game-card" id="forza3">
+<div class="game-thumb"><img src="https://gaming-cdn.com/images/products/7626/orig/forza-horizon-3-ultimate-edition-ultimate-edition-pc-xbox-one-jogo-microsoft-store-cover.jpg?v=1738681403"></div>
+<div class="game-info">
 <h2>Forza Horizon 3 Ultimate Edition</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/e32v8uUj0DY" allowfullscreen></iframe>
+<p>Explore a Austrália em um dos melhores jogos de corrida do mundo.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 8GB</span><span>GPU: GTX 970</span><span>Armazenamento: 55GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=e32v8uUj0DY" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.usercontent.google.com/download?id=16pVdGf31j3A-nMg7D0bKM4ywasrn4Ka9&export=download&authuser=0">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Explore a Austrália em um dos melhores jogos de corrida do mundo.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 970</li>
-<li>Armazenamento: 55GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=16pVdGf31j3A-nMg7D0bKM4ywasrn4Ka9&export=download&authuser=0">⬇ DOWNLOAD</a>
-
 </section>
 
-
-
-<!-- SILENT HILL -->
-
-<section class="game" id="silenthillf">
-
-<img class="banner" src="https://cdn1.epicgames.com/spt-assets/6d34282a26c544df88ccc57505cdd2f0/silent-hill-f-1kmjs.jpg">
-
-<h2>SILENT HILL f - Digital Deluxe Edition PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/0NMoPvqaz10" allowfullscreen></iframe>
+<section class="game-card" id="silenthillf">
+<div class="game-thumb"><img src="https://cdn1.epicgames.com/spt-assets/6d34282a26c544df88ccc57505cdd2f0/silent-hill-f-1kmjs.jpg"></div>
+<div class="game-info">
+<h2>Silent Hill F Deluxe</h2>
+<p>Novo capítulo da franquia Silent Hill com terror psicológico intenso.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 16GB</span><span>GPU: RTX 2060</span><span>Armazenamento: 50GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=0NMoPvqaz10" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.google.com/file/d/1nhkRh3KG13zOaGpP8a_iVKrt-Vv0JcJI/view">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Novo capítulo da franquia Silent Hill com terror psicológico intenso.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 16GB</li>
-<li>GPU: RTX 2060</li>
-<li>Armazenamento: 50GB</li>
-</ul>
-
-<a class="download" href="https://drive.google.com/file/d/1nhkRh3KG13zOaGpP8a_iVKrt-Vv0JcJI/view">⬇ DOWNLOAD</a>
-
 </section>
 
-
-
-<!-- GOD OF WAR -->
-
-<section class="game" id="gow">
-
-<img class="banner" src="https://i.ytimg.com/vi/G3WHnjmb31s/maxresdefault.jpg">
-
-<h2>God of War: Lore Ascension</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/47tGIC2fUs0" allowfullscreen></iframe>
+<section class="game-card" id="gow">
+<div class="game-thumb"><img src="https://i.ytimg.com/vi/G3WHnjmb31s/maxresdefault.jpg"></div>
+<div class="game-info">
+<h2>God of War Lore Ascension</h2>
+<p>Kratos enfrenta os deuses em uma jornada brutal de vingança.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 8GB</span><span>GPU: GTX 1060</span><span>Armazenamento: 50GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=47tGIC2fUs0" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://www.mediafire.com/file/duv84aobe90rix3/God_of_War_-_Lore_Ascension.7z/file">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Kratos enfrenta os deuses em uma jornada brutal de vingança.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 1060</li>
-<li>Armazenamento: 50GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/duv84aobe90rix3/God_of_War_-_Lore_Ascension.7z/file">⬇ DOWNLOAD</a>
-
 </section>
 
-
-
-<!-- SENUA -->
-
-<section class="game" id="senua2">
-
-<img class="banner" src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEih_2rn0eCibTe86OHI13vixuRQGPvXHqCHvgxfSbzUpzCiVUdPNz4jMD5RU_Ui_2IEA4lgOyT562Cg7HETypF_QeKNaQ3I80l90JSHQXYItKtIIAoAx-WlzW_1ljKtiTr6N_vlM1oxmd7bZKqfCX-aOGta3Cm2vSox9GtLa19eKVIq7-N2zuvndn2joo82/s1920/Senua">
-
-<h2>Senuas Saga Hellblade II Enhanced PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/VLXmOJLcd7s" allowfullscreen></iframe>
+<section class="game-card" id="senua2">
+<div class="game-thumb"><img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEih_2rn0eCibTe86OHI13vixuRQGPvXHqCHvgxfSbzUpzCiVUdPNz4jMD5RU_Ui_2IEA4lgOyT562Cg7HETypF_QeKNaQ3I80l90JSHQXYItKtIIAoAx-WlzW_1ljKtiTr6N_vlM1oxmd7bZKqfCX-aOGta3Cm2vSox9GtLa19eKVIq7-N2zuvndn2joo82/s1920/Senua"></div>
+<div class="game-info">
+<h2>Senua's Saga Hellblade II</h2>
+<p>Uma jornada sombria e emocional inspirada na mitologia nórdica.</p>
+<div class="spec-grid"><span>CPU: i7</span><span>RAM: 16GB</span><span>GPU: RTX 3060</span><span>Armazenamento: 70GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=VLXmOJLcd7s" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.google.com/file/d/1G5QWun8XAUcGs3TRlPYKpcdcpHKOAMaD/view">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Uma jornada sombria e emocional inspirada na mitologia nórdica.
-</p>
-
-<ul class="specs">
-<li>CPU: i7</li>
-<li>RAM: 16GB</li>
-<li>GPU: RTX 3060</li>
-<li>Armazenamento: 70GB</li>
-</ul>
-
-<a class="download" href="https://drive.google.com/file/d/1G5QWun8XAUcGs3TRlPYKpcdcpHKOAMaD/view">⬇ DOWNLOAD</a>
-
 </section>
 
-
-
-<!-- INDIANA -->
-
-<section class="game" id="indiana">
-
-<img class="banner" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2677660/121b202cd5322f539a1e52a655fc5c7b98c19b97/capsule_616x353_brazilian.jpg?t=1763745007">
-
+<section class="game-card" id="indiana">
+<div class="game-thumb"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2677660/121b202cd5322f539a1e52a655fc5c7b98c19b97/capsule_616x353_brazilian.jpg?t=1763745007"></div>
+<div class="game-info">
 <h2>Indiana Jones e o Grande Círculo</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/WjsWjwqCX4Y" allowfullscreen></iframe>
+<p>Aventure-se em uma jornada cheia de mistérios e artefatos antigos.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 16GB</span><span>GPU: RTX 2060</span><span>Armazenamento: 60GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=WjsWjwqCX4Y" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://www.mediafire.com/file/yzfcx7dlxodhnxr/Indiana_Jones_e_o_Grande_Círculo_-_Premium_Edition_2024_PC_%28DUBLADO_PT-BR%29.rar/file">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Aventure-se em uma jornada cheia de mistérios e artefatos antigos.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 16GB</li>
-<li>GPU: RTX 2060</li>
-<li>Armazenamento: 60GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/yzfcx7dlxodhnxr/Indiana_Jones_e_o_Grande_Círculo_-_Premium_Edition_2024_PC_%28DUBLADO_PT-BR%29.rar/file">⬇ DOWNLOAD</a>
-
 </section>
 
-
-
-<!-- HELL IS US -->
-
-<section class="game" id="hellisus">
-
-<img class="banner" src="https://cdn1.epicgames.com/spt-assets/340b7dcf4fc94b289d8958815593acb9/hell-is-us-4qd3q.jpg">
-
-<h2>Hell is Us - Deluxe Edition PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/ha5N-iV1DZY" allowfullscreen></iframe>
+<section class="game-card" id="hellisus">
+<div class="game-thumb"><img src="https://cdn1.epicgames.com/spt-assets/340b7dcf4fc94b289d8958815593acb9/hell-is-us-4qd3q.jpg"></div>
+<div class="game-info">
+<h2>Hell is Us Deluxe Edition</h2>
+<p>Um mundo devastado pela guerra onde criaturas misteriosas surgem.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 16GB</span><span>GPU: RTX 2060</span><span>Armazenamento: 60GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=ha5N-iV1DZY" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.usercontent.google.com/download?id=1EC0d3Xg4fVNr1WLysrixH2o8Nox3oqxz&export=download&authuser=0">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Um mundo devastado pela guerra onde criaturas misteriosas surgem.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 16GB</li>
-<li>GPU: RTX 2060</li>
-<li>Armazenamento: 60GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=1EC0d3Xg4fVNr1WLysrixH2o8Nox3oqxz&export=download&authuser=0">⬇ DOWNLOAD</a>
-
 </section>
 
-
-
-<!-- CALL OF DUTY -->
-
-<section class="game" id="codmw">
-
-<img class="banner" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2000950/capsule_616x353.jpg?t=1678294805">
-
+<section class="game-card" id="codmw">
+<div class="game-thumb"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2000950/capsule_616x353.jpg?t=1678294805"></div>
+<div class="game-info">
 <h2>Call of Duty Modern Warfare 2019</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/OGjUSyETd1U" allowfullscreen></iframe>
+<p>Combate moderno intenso com campanha cinematográfica.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 12GB</span><span>GPU: GTX 1060</span><span>Armazenamento: 80GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=OGjUSyETd1U" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://www.mediafire.com/file/7x6djvoldm8219r/Call_of_Duty_-_Modern_Warfare_2019_PC_%2528DUBLADO_PT-BR%2529.rar/file">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Combate moderno intenso com campanha cinematográfica.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 12GB</li>
-<li>GPU: GTX 1060</li>
-<li>Armazenamento: 80GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/7x6djvoldm8219r/Call_of_Duty_-_Modern_Warfare_2019_PC_%2528DUBLADO_PT-BR%2529.rar/file">⬇ DOWNLOAD</a>
-
 </section>
 
-<!-- ULTRA STREET FIGHTER IV -->
-
-<section class="game" id="streetfighter">
-
-<img class="banner" src="https://i.ytimg.com/vi/5kKvMgNjG7Y/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLCyNqffSHC7Y2FQsYpftQkEFGlPhA">
-
-<h2>Ultra Street Fighter IV PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/d__QncYv3VU" allowfullscreen></iframe>
+<section class="game-card" id="streetfighter">
+<div class="game-thumb"><img src="https://i.ytimg.com/vi/5kKvMgNjG7Y/hq720.jpg"></div>
+<div class="game-info">
+<h2>Ultra Street Fighter IV</h2>
+<p>Versão definitiva do clássico jogo de luta com todos os personagens.</p>
+<div class="spec-grid"><span>CPU: i3</span><span>RAM: 4GB</span><span>GPU: GTX 750</span><span>Armazenamento: 12GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=d__QncYv3VU" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://www.mediafire.com/file/q62amwoq9bkhriu/Ultra_Street_Fighter_IV_PC_%28Legendado_PT-BR%29.rar/file">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Versão definitiva do clássico jogo de luta com todos os personagens.
-</p>
-
-<ul class="specs">
-<li>CPU: i3</li>
-<li>RAM: 4GB</li>
-<li>GPU: GTX 750</li>
-<li>Armazenamento: 12GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/q62amwoq9bkhriu/Ultra_Street_Fighter_IV_PC_%28Legendado_PT-BR%29.rar/file">⬇ DOWNLOAD</a>
-
 </section>
 
-
-
-<!-- DEAD SPACE TRILOGIA -->
-
-<section class="game" id="deadspace">
-
-<img class="banner" src="https://cdn1.epicgames.com/offer/4ec958d5e4b6429aadbc116cee0b6ea0/EGS_DeadSpace_MotiveStudio_S1_2560x1440-48626121e40a971f59b60451fa3d8636">
-
-<h2>Trilogia Dead Space PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/G5JviLRgXes" allowfullscreen></iframe>
+<section class="game-card" id="deadspace">
+<div class="game-thumb"><img src="https://cdn1.epicgames.com/offer/4ec958d5e4b6429aadbc116cee0b6ea0/EGS_DeadSpace_MotiveStudio_S1_2560x1440-48626121e40a971f59b60451fa3d8636"></div>
+<div class="game-info">
+<h2>Trilogia Dead Space</h2>
+<p>Sobreviva ao terror espacial enfrentando Necromorphs em uma jornada brutal.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 8GB</span><span>GPU: GTX 960</span><span>Armazenamento: 35GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=G5JviLRgXes" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.usercontent.google.com/download?id=1lOF7YwLqr-xG-Hva1RtoeD0Hk29wr3r4&export=download&authuser=0">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Sobreviva ao terror espacial enfrentando Necromorphs em uma jornada brutal.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 960</li>
-<li>Armazenamento: 35GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=1lOF7YwLqr-xG-Hva1RtoeD0Hk29wr3r4&export=download&authuser=0" class="btn-download">⬇ DOWNLOAD</a>
-
 </section>
 
-
-
-<!-- NEED FOR SPEED -->
-
-<section class="game" id="nfs">
-
-<img class="banner" src="https://i.ytimg.com/vi/qPU73o-OL3g/maxresdefault.jpg">
-
-<h2>Need for Speed Most Wanted Limited Edition PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/OdtInLJKC_g" allowfullscreen></iframe>
+<section class="game-card" id="nfs">
+<div class="game-thumb"><img src="https://i.ytimg.com/vi/qPU73o-OL3g/maxresdefault.jpg"></div>
+<div class="game-info">
+<h2>Need for Speed Most Wanted</h2>
+<p>Corridas ilegais intensas com perseguições policiais eletrizantes.</p>
+<div class="spec-grid"><span>CPU: i3</span><span>RAM: 4GB</span><span>GPU: GTX 750</span><span>Armazenamento: 20GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=OdtInLJKC_g" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.usercontent.google.com/download?id=1nhT7b7U5mSa5D8mUvDbxatkL82msAIuN&export=download&authuser=0">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Corridas ilegais intensas com perseguições policiais eletrizantes.
-</p>
-
-<ul class="specs">
-<li>CPU: i3</li>
-<li>RAM: 4GB</li>
-<li>GPU: GTX 750</li>
-<li>Armazenamento: 20GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=1nhT7b7U5mSa5D8mUvDbxatkL82msAIuN&export=download&authuser=0">⬇ DOWNLOAD</a>
-
 </section>
 
-
-
-<!-- NIOH 3 -->
-
-<section class="game" id="nioh3">
-
-<img class="banner" src="https://gaming-cdn.com/images/products/21062/orig/nioh-3-pc-steam-cover.jpg?v=1770383000">
-
-<h2>Nioh 3 Digital Deluxe Edition PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/30C75tjO3ms" allowfullscreen></iframe>
+<section class="game-card" id="nioh3">
+<div class="game-thumb"><img src="https://gaming-cdn.com/images/products/21062/orig/nioh-3-pc-steam-cover.jpg?v=1770383000"></div>
+<div class="game-info">
+<h2>Nioh 3 Deluxe Edition</h2>
+<p>Ação intensa inspirada na mitologia japonesa com combate brutal.</p>
+<div class="spec-grid"><span>CPU: i7</span><span>RAM: 16GB</span><span>GPU: RTX 2060</span><span>Armazenamento: 70GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=30C75tjO3ms" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.google.com/file/d/1XwZyYMTP1pikvAmM24NsQ2ASd29cZTje/view">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Ação intensa inspirada na mitologia japonesa com combate brutal.
-</p>
-
-<ul class="specs">
-<li>CPU: i7</li>
-<li>RAM: 16GB</li>
-<li>GPU: RTX 2060</li>
-<li>Armazenamento: 70GB</li>
-</ul>
-
-<a class="download" href="https://drive.google.com/file/d/1XwZyYMTP1pikvAmM24NsQ2ASd29cZTje/view">⬇ DOWNLOAD</a>
-
 </section>
-
-
 
 <!-- RESIDENT EVIL 4 -->
-
-<section class="game" id="re4">
-
-<img class="banner" src="https://gaming-cdn.com/images/products/15856/616x353/resident-evil-4-gold-edition-gold-edition-pc-jogo-steam-europe-cover.jpg?v=1712846247">
-
-<h2>Resident Evil 4 Gold Edition PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/umzbiP9xFQQ" allowfullscreen></iframe>
+<section class="game-card" id="re4">
+<div class="game-thumb"><img src="https://gaming-cdn.com/images/products/15856/616x353/resident-evil-4-gold-edition-gold-edition-pc-jogo-steam-europe-cover.jpg?v=1712846247"></div>
+<div class="game-info">
+<h2>Resident Evil 4 Gold Edition</h2>
+<p>Leon enfrenta um culto misterioso em um dos melhores survival horrors já feitos.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 8GB</span><span>GPU: GTX 1060</span><span>Armazenamento: 50GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=umzbiP9xFQQ" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.usercontent.google.com/download?id=1NZxkenydZqiw2HdBeham9YRdhKen7Rw8&export=download&authuser=0">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Leon enfrenta um culto misterioso em um dos melhores survival horrors já feitos.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 1060</li>
-<li>Armazenamento: 50GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=1NZxkenydZqiw2HdBeham9YRdhKen7Rw8&export=download&authuser=0">⬇ DOWNLOAD</a>
-
 </section>
-
-
 
 <!-- BATTLEFIELD 6 -->
-
-<section class="game" id="bf6">
-
-<img class="banner" src="https://i.ytimg.com/vi/wFuzWzkEaDs/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLDEpbd5CA3KnyAH3LXePf54LdHk4Q">
-
-<h2>Battlefield 6 Phantom Edition PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/wFGEMfyAQtI" allowfullscreen></iframe>
+<section class="game-card" id="bf6">
+<div class="game-thumb"><img src="https://i.ytimg.com/vi/wFuzWzkEaDs/hq720.jpg"></div>
+<div class="game-info">
+<h2>Battlefield 6 Phantom Edition</h2>
+<p>Guerra moderna em grande escala com mapas gigantescos e destruição total.</p>
+<div class="spec-grid"><span>CPU: i7</span><span>RAM: 16GB</span><span>GPU: RTX 3060</span><span>Armazenamento: 80GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=wFGEMfyAQtI" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://www.mediafire.com/file/8hpy0xzgsyhq7l9/Battlefield_6_Phantom_Edition_PC_%282025%29_TODOS_OS_DLCs_%28DUBLADO_PT-BR%29.rar/file">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Guerra moderna em grande escala com mapas gigantescos.
-</p>
-
-<ul class="specs">
-<li>CPU: i7</li>
-<li>RAM: 16GB</li>
-<li>GPU: RTX 3060</li>
-<li>Armazenamento: 80GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/8hpy0xzgsyhq7l9/Battlefield_6_Phantom_Edition_PC_%282025%29_TODOS_OS_DLCs_%28DUBLADO_PT-BR%29.rar/file">⬇ DOWNLOAD</a>
-
 </section>
-
-
 
 <!-- NINJA GAIDEN 4 -->
-
-<section class="game" id="ninjagaiden">
-
-<img class="banner" src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2627260/header.jpg?t=1762366827">
-
+<section class="game-card" id="ninjagaiden">
+<div class="game-thumb"><img src="https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/2627260/header.jpg?t=1762366827"></div>
+<div class="game-info">
 <h2>Ninja Gaiden 4 Deluxe Edition</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/mopzOQ8N8E4" allowfullscreen></iframe>
+<p>Combate ninja extremamente rápido, brutal e cheio de efeitos cinematográficos.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 8GB</span><span>GPU: GTX 1060</span><span>Armazenamento: 40GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=mopzOQ8N8E4" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.usercontent.google.com/download?id=1qLc7UyUuhB8Q-jCjswBPfvTFxx8ibJ8x&export=download&authuser=0">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Combate ninja extremamente rápido e brutal.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 1060</li>
-<li>Armazenamento: 40GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=1qLc7UyUuhB8Q-jCjswBPfvTFxx8ibJ8x&export=download&authuser=0">⬇ DOWNLOAD</a>
-
 </section>
-
-
 
 <!-- ASSASSINS CREED -->
-
-<section class="game" id="acblackflag">
-
-<img class="banner" src="https://viciados.net/wp-content/uploads/2023/06/Ubisoft-Assassins-Creed-IV-Black-Flag-Remake-Soon.webp">
-
+<section class="game-card" id="acblackflag">
+<div class="game-thumb"><img src="https://viciados.net/wp-content/uploads/2023/06/Ubisoft-Assassins-Creed-IV-Black-Flag-Remake-Soon.webp"></div>
+<div class="game-info">
 <h2>Assassin's Creed Black Flag</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/OwVe4ZNeQZk" allowfullscreen></iframe>
+<p>Explore o Caribe como pirata em um dos melhores Assassin's Creed já lançados.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 8GB</span><span>GPU: GTX 760</span><span>Armazenamento: 30GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=OwVe4ZNeQZk" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://www.mediafire.com/file/4lxlgq2lv43g0lk/Assassin%27s_Creed_Black_Flag_-_Complete_Edition_PC_%28DUBLADO_PT-BR%29.rar/file">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Explore o Caribe como pirata em um dos melhores Assassin's Creed.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 760</li>
-<li>Armazenamento: 30GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/4lxlgq2lv43g0lk/Assassin%27s_Creed_Black_Flag_-_Complete_Edition_PC_%28DUBLADO_PT-BR%29.rar/file">⬇ DOWNLOAD</a>
-
 </section>
-
-
 
 <!-- DARK SOULS 2 -->
-
-<section class="game" id="darksouls2">
-
-<img class="banner" src="https://i.ytimg.com/vi/ikSaiSrCpDo/maxresdefault.jpg">
-
-<h2>Dark Souls II Scholar of the First Sin PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/tDHyIKlWcys" allowfullscreen></iframe>
+<section class="game-card" id="darksouls2">
+<div class="game-thumb"><img src="https://i.ytimg.com/vi/ikSaiSrCpDo/maxresdefault.jpg"></div>
+<div class="game-info">
+<h2>Dark Souls II Scholar of the First Sin</h2>
+<p>Desafie a morte em um RPG brutal e recompensador com chefes inesquecíveis.</p>
+<div class="spec-grid"><span>CPU: i3</span><span>RAM: 6GB</span><span>GPU: GTX 750</span><span>Armazenamento: 25GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=tDHyIKlWcys" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.usercontent.google.com/download?id=1N-O3Vrv6mdRUAhJg0hMo87p66_LEz_9a&export=download&authuser=0">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Desafie a morte em um RPG brutal e recompensador.
-</p>
-
-<ul class="specs">
-<li>CPU: i3</li>
-<li>RAM: 6GB</li>
-<li>GPU: GTX 750</li>
-<li>Armazenamento: 25GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=1N-O3Vrv6mdRUAhJg0hMo87p66_LEz_9a&export=download&authuser=0">⬇ DOWNLOAD</a>
-
 </section>
-
-
 
 <!-- GOTHAM KNIGHTS -->
-
-<section class="game" id="gotham">
-
-<img class="banner" src="https://cdn1.epicgames.com/offer/05057ec2d5ea43c3b0701cc1518e0577/EGS_GothamKnightsDeluxe_WarnerBrosGamesMontreal_Editions_S1_2560x1440-f9c8e9acb58e2c897728033038f2a499">
-
-<h2>Gotham Knights PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/CbyT8nvn5Mc" allowfullscreen></iframe>
+<section class="game-card" id="gotham">
+<div class="game-thumb"><img src="https://cdn1.epicgames.com/offer/05057ec2d5ea43c3b0701cc1518e0577/EGS_GothamKnightsDeluxe_WarnerBrosGamesMontreal_Editions_S1_2560x1440-f9c8e9acb58e2c897728033038f2a499"></div>
+<div class="game-info">
+<h2>Gotham Knights</h2>
+<p>Proteja Gotham City assumindo o papel dos heróis sucessores do Batman.</p>
+<div class="spec-grid"><span>CPU: i7</span><span>RAM: 16GB</span><span>GPU: RTX 2060</span><span>Armazenamento: 45GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=CbyT8nvn5Mc" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.usercontent.google.com/download?id=19g-cHlBHyD-DCUT46cN9sS6YaMV-Qg1g&export=download&authuser=0">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Proteja Gotham City assumindo o papel dos aliados do Batman.
-</p>
-
-<ul class="specs">
-<li>CPU: i7</li>
-<li>RAM: 16GB</li>
-<li>GPU: RTX 2060</li>
-<li>Armazenamento: 45GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=19g-cHlBHyD-DCUT46cN9sS6YaMV-Qg1g&export=download&authuser=0">⬇ DOWNLOAD</a>
-
 </section>
-
-
 
 <!-- INJUSTICE 2 -->
-
-<section class="game" id="injustice2">
-
-<img class="banner" src="https://assets.nuuvem.com/image/upload/v1/products/5abc08678810246d5f0e5ee5/sharing_images/fuyoz4oafrsvx2oxzlvk.jpg">
-
-<h2>Injustice 2 Legendary Edition PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/Bf-qe82QI_8" allowfullscreen></iframe>
+<section class="game-card" id="injustice2">
+<div class="game-thumb"><img src="https://assets.nuuvem.com/image/upload/v1/products/5abc08678810246d5f0e5ee5/sharing_images/fuyoz4oafrsvx2oxzlvk.jpg"></div>
+<div class="game-info">
+<h2>Injustice 2 Legendary Edition</h2>
+<p>Batalhas épicas entre heróis e vilões do universo DC com modo história cinematográfico.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 8GB</span><span>GPU: GTX 970</span><span>Armazenamento: 40GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=Bf-qe82QI_8" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.usercontent.google.com/download?id=1hPj_UY2tRFDiWOED6oOXYr0aNCXa9pbK&export=download&authuser=0">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Batalhas épicas entre heróis e vilões do universo DC.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 970</li>
-<li>Armazenamento: 40GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=1hPj_UY2tRFDiWOED6oOXYr0aNCXa9pbK&export=download&authuser=0">⬇ DOWNLOAD</a>
-
 </section>
-
-
 
 <!-- SPIDER MAN -->
-
-<section class="game" id="spiderman">
-
-<img class="banner" src="https://cdn.awsli.com.br/22/22652/arquivos/marvel-s-spider-man-remastered.jpg">
-
-<h2>Marvel's Spider-Man Remastered PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/mrT5q5xXb7Y" allowfullscreen></iframe>
+<section class="game-card" id="spiderman">
+<div class="game-thumb"><img src="https://cdn.awsli.com.br/22/22652/arquivos/marvel-s-spider-man-remastered.jpg"></div>
+<div class="game-info">
+<h2>Marvel's Spider-Man Remastered</h2>
+<p>Balance pelos prédios de Nova York em uma aventura épica do Homem-Aranha.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 8GB</span><span>GPU: GTX 1060</span><span>Armazenamento: 75GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=mrT5q5xXb7Y" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://www.mediafire.com/file/cuwv48r6ok4oohg/Marvel’s_Spider-Man_Remastered_PC_%2B_DLC_%28DUBLADO_PT-BR%29.rar/file">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Balance pelos prédios de Nova York em uma aventura épica do Homem-Aranha.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 1060</li>
-<li>Armazenamento: 75GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/cuwv48r6ok4oohg/Marvel’s_Spider-Man_Remastered_PC_%2B_DLC_%28DUBLADO_PT-BR%29.rar/file">⬇ DOWNLOAD</a>
-
 </section>
-
-
 
 <!-- XENOVERSE 2 -->
-
-<section class="game" id="xenoverse2">
-
-<img class="banner" src="https://cdn-ext.fanatical.com/production/product/1280x720/9958493c-c64d-4395-afa2-a477cfa42e0f.jpeg">
-
+<section class="game-card" id="xenoverse2">
+<div class="game-thumb"><img src="https://cdn-ext.fanatical.com/production/product/1280x720/9958493c-c64d-4395-afa2-a477cfa42e0f.jpeg"></div>
+<div class="game-info">
 <h2>Dragon Ball Xenoverse 2 Special Edition</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/SSnZ_Tp0ynE" allowfullscreen></iframe>
+<p>Viaje pelo tempo para restaurar a história de Dragon Ball com batalhas frenéticas.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 8GB</span><span>GPU: GTX 960</span><span>Armazenamento: 35GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=SSnZ_Tp0ynE" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://www.mediafire.com/file/vaaz9ir9255c0rc/Dragon_Ball_Xenoverse_2_-_Special_Edition_v1.22.00_%2B_31_DLCs_PC_%28Legendado_PT-BR%29.rar/file">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Viaje pelo tempo para restaurar a história de Dragon Ball.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 960</li>
-<li>Armazenamento: 35GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/vaaz9ir9255c0rc/Dragon_Ball_Xenoverse_2_-_Special_Edition_v1.22.00_%2B_31_DLCs_PC_%28Legendado_PT-BR%29.rar/file">⬇ DOWNLOAD</a>
-
 </section>
 
-
-
-<!-- RED DEAD -->
-
-<section class="game" id="rdr2">
-
-<img class="banner" src="https://i.ytimg.com/vi/hM9fSmxoB4g/maxresdefault.jpg" height="300PX">
-
+<!-- RED DEAD REDEMPTION 2 -->
+<section class="game-card" id="rdr2">
+<div class="game-thumb"><img src="https://i.ytimg.com/vi/hM9fSmxoB4g/maxresdefault.jpg"></div>
+<div class="game-info">
 <h2>Red Dead Redemption 2 Ultimate Edition</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/HVRzx17WHVk" allowfullscreen></iframe>
+<p>Uma das histórias mais incríveis já feitas nos videogames em um mundo aberto vivo.</p>
+<div class="spec-grid"><span>CPU: i7</span><span>RAM: 12GB</span><span>GPU: GTX 1060</span><span>Armazenamento: 150GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=HVRzx17WHVk" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://www.mediafire.com/file/hi51w4nfjivnarr/Red_Dead_Redemption_2_Ultimate_Edition_PT-BR_v1491.50_%2B_All_DLCs_PC_%28Legendado_PT-BR%29.rar/file">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Uma das histórias mais incríveis já feitas nos videogames.
-</p>
-
-<ul class="specs">
-<li>CPU: i7</li>
-<li>RAM: 12GB</li>
-<li>GPU: GTX 1060</li>
-<li>Armazenamento: 150GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/hi51w4nfjivnarr/Red_Dead_Redemption_2_Ultimate_Edition_PT-BR_v1491.50_%2B_All_DLCs_PC_%28Legendado_PT-BR%29.rar/file">⬇ DOWNLOAD</a>
-
 </section>
 
-
-
-<!-- EVIL WITHIN -->
-
-<section class="game" id="evilwithin2">
-
-<img class="banner" src="https://gaming-cdn.com/images/products/2133/616x353/the-evil-within-2-pc-jogo-steam-cover.jpg?v=1650450943">
-
-<h2>The Evil Within 2 PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/f7JbFBq4NAo" allowfullscreen></iframe>
+<!-- THE EVIL WITHIN 2 -->
+<section class="game-card" id="evilwithin2">
+<div class="game-thumb"><img src="https://gaming-cdn.com/images/products/2133/616x353/the-evil-within-2-pc-jogo-steam-cover.jpg?v=1650450943"></div>
+<div class="game-info">
+<h2>The Evil Within 2</h2>
+<p>Terror psicológico intenso criado pelo diretor de Resident Evil com atmosfera insana.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 8GB</span><span>GPU: GTX 970</span><span>Armazenamento: 40GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=f7JbFBq4NAo" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://www.mediafire.com/file/0s11pvbjp0o5q5y/The_Evil_Within_2_edição_completa_PC_%28DUBLADO_PT-BR%29.rar/file">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Terror psicológico intenso criado pelo diretor de Resident Evil.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 970</li>
-<li>Armazenamento: 40GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/0s11pvbjp0o5q5y/The_Evil_Within_2_edição_completa_PC_%28DUBLADO_PT-BR%29.rar/file">⬇ DOWNLOAD</a>
-
 </section>
-
-
 
 <!-- MAFIA -->
-
-<section class="game" id="mafia">
-
-<img class="banner" src="https://www.gamerscore.com.br/wp-content/uploads/2024/08/Mafia.webp">
-
-<h2>Mafia Definitive Edition PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/3a5cqV8PUQs" allowfullscreen></iframe>
+<section class="game-card" id="mafia">
+<div class="game-thumb"><img src="https://www.gamerscore.com.br/wp-content/uploads/2024/08/Mafia.webp"></div>
+<div class="game-info">
+<h2>Mafia Definitive Edition</h2>
+<p>Remake cinematográfico do clássico jogo de máfia ambientado nos anos 1930.</p>
+<div class="spec-grid"><span>CPU: i5</span><span>RAM: 8GB</span><span>GPU: GTX 970</span><span>Armazenamento: 50GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=3a5cqV8PUQs" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://www.mediafire.com/file/aabpu1uuurmjqhu/Mafia_Definitive_Edition_PC_%28Legendado_PT-BR%29.rar/file">⬇ DOWNLOAD</a></div>
 </div>
-
-<p class="descricao">
-Remake do clássico jogo de máfia ambientado nos anos 1930.
-</p>
-
-<ul class="specs">
-<li>CPU: i5</li>
-<li>RAM: 8GB</li>
-<li>GPU: GTX 970</li>
-<li>Armazenamento: 50GB</li>
-</ul>
-
-<a class="download" href="https://www.mediafire.com/file/aabpu1uuurmjqhu/Mafia_Definitive_Edition_PC_%28Legendado_PT-BR%29.rar/file">⬇ DOWNLOAD</a>
-
 </section>
-
-
 
 <!-- NARUTO -->
-
-<section class="game" id="naruto">
-
-<img class="banner" src="https://i.ytimg.com/vi/YZsrMGe4y88/maxresdefault.jpg">
-
+<section class="game-card" id="naruto">
+<div class="game-thumb"><img src="https://i.ytimg.com/vi/YZsrMGe4y88/maxresdefault.jpg"></div>
+<div class="game-info">
 <h2>Naruto Shippuden Ultimate Ninja Storm 4</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/OdfUmGwAYoU" allowfullscreen></iframe>
+<p>Lutas épicas do anime Naruto em arenas gigantes com todos os personagens lendários.</p>
+<div class="spec-grid"><span>CPU: i3</span><span>RAM: 6GB</span><span>GPU: GTX 750</span><span>Armazenamento: 40GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=OdfUmGwAYoU" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.usercontent.google.com/download?id=1EvuydEGI2f8NS1CCy-qm1Gy25l0CThD3&export=download&authuser=0">⬇ DOWNLOAD</a></div>
 </div>
+</section>
 
-<p class="descricao">
-Lutas épicas do anime Naruto em arenas gigantes.
-</p>
-
-<ul class="specs">
-<li>CPU: i3</li>
-<li>RAM: 6GB</li>
-<li>GPU: GTX 750</li>
-<li>Armazenamento: 40GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=1EvuydEGI2f8NS1CCy-qm1Gy25l0CThD3&export=download&authuser=0">⬇ DOWNLOAD</a>
-
+<!-- THE LAST OF US PART II -->
+<section class="game-card" id="tlou2">
+<div class="game-thumb"><img src="https://i.ytimg.com/vi/2jO3T5qJ77g/hq720.jpg"></div>
+<div class="game-info">
+<h2>The Last of Us Part II Remastered</h2>
+<p>Uma história emocional de sobrevivência brutal em um mundo devastado e cinematográfico.</p>
+<div class="spec-grid"><span>CPU: i7</span><span>RAM: 16GB</span><span>GPU: RTX 2060</span><span>Armazenamento: 100GB</span></div>
+<div class="buttons-area"><a class="watch-btn" href="https://www.youtube.com/watch?v=O6MdexNSy3o" target="_blank">▶ TRAILER</a><a class="download-btn" href="https://drive.usercontent.google.com/download?id=1bhbAN1fN7py2usdC9WvYPKYoAVSrNoIM&export=download&authuser=0">⬇ DOWNLOAD</a></div>
+</div>
 </section>
 
 
 
-<!-- THE LAST OF US -->
-
-<section class="game" id="tlou2">
-
-<img class="banner" src="https://i.ytimg.com/vi/2jO3T5qJ77g/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLAE7pDxtTQLsoeYAVLfALnlkaKvAQ">
-
-<h2>The Last of Us Parte II Remastered PC</h2>
-
-<div class="trailer">
-<iframe src="https://www.youtube.com/embed/O6MdexNSy3o" allowfullscreen></iframe>
-</div>
-
-<p class="descricao">
-Uma história emocional de sobrevivência em um mundo devastado.
-</p>
-
-<ul class="specs">
-<li>CPU: i7</li>
-<li>RAM: 16GB</li>
-<li>GPU: RTX 2060</li>
-<li>Armazenamento: 100GB</li>
-</ul>
-
-<a class="download" href="https://drive.usercontent.google.com/download?id=1bhbAN1fN7py2usdC9WvYPKYoAVSrNoIM&export=download&authuser=0">⬇ DOWNLOAD</a>
+<!-- RESTANTE DOS JOGOS SEGUEM NESSE MESMO PADRÃO COMPLETAMENTE REFEITOS -->
 
 </section>
-
-
-<div id="particles-js"></div>
-
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-
-<script src="particles.js"></script>
 
 <script>
-
-const searchInput = document.getElementById("searchInput")
-
-searchInput.addEventListener("keyup", function(){
-
-let filter = searchInput.value.toLowerCase()
-
-let games = document.querySelectorAll(".game")
-
+const searchInput = document.getElementById('searchInput');
+searchInput.addEventListener('keyup', function(){
+let filter = searchInput.value.toLowerCase();
+let games = document.querySelectorAll('.game-card');
 games.forEach(function(game){
-
-let title = game.querySelector("h2").textContent.toLowerCase()
-
+let title = game.querySelector('h2').textContent.toLowerCase();
 if(title.includes(filter)){
-
-game.style.display="block"
-
+game.style.display='flex';
 }else{
-
-game.style.display="none"
-
+game.style.display='none';
 }
-
 })
-
 })
-
 </script>
-
 
 </body>
 </html>
