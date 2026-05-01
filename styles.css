@@ -222,11 +222,11 @@ body{
 }
 
 body {
-    cursor: url("public/assets/images/cursor.png"), auto;
+    cursor: url("public/assets/images/cursorMR.png"), auto;
 }
 
 button, a {
-    cursor: url("public/assets/images/cursor.png"), pointer;
+    cursor: url("public/assets/images/cursorMR.png"), pointer;
 }
 
 /* CONTROLES */
@@ -1048,6 +1048,8 @@ body.light-mode .btn-details:hover{
     border:1px solid rgba(0,0,0,.15);
     background:rgba(255,255,255,.65);
 }
+
+
 
 
 /* RESPONSIVO */
