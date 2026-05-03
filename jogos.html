@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogos - HegueZone</title>
+    <link rel="stylesheet" href="jogos.css">
+    <link rel="icon" href="/public/assets/images/jogosicon.png">
+
+    <audio id="hoverSound" src="public assets/audios/musicooin.mp3"></audio>
+    <audio id="clickSound" src="public assets/audios/switch.mp3"></audio>
+</head>
+<body>
+
+    <div class="scan-line"></div>
+
+<div class="warning-bar">
+    ⚠ SISTEMA RECREATIVO NÃO OFICIALIZADO — EXECUTE OS ARQUIVOS POR SUA CONTA E RISCO
+</div>
+
+
+<div class="particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+
+    <!-- NAVBAR -->
+    <header class="navbar">
+        <div class="logo">🎮 HegueZone Arcade</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="game.html">Catálogo</a>
+            <a href="jogos.html" class="active">Jogos</a>
+            <a href="populares.html">Populares</a>
+            <a href="#">Novidades</a>
+        </nav>
+    </header>
+
+    <!-- TITULO -->
+   <section class="hero-jogos">
+    <h1>ARCADE ILEGAL HEGUEZONE</h1>
+    <p>Minigames adquiridos de fontes extremamente suspeitas.</p>
+    <div class="stats-line">
+        <span>Arquivos Recreativos: 04</span>
+        <span>Status: 01 Executável</span>
+        <span>Integridade: 37%</span>
+    </div>
+</section>
+
+    <!-- GRID DE JOGOS -->
+    <section class="arcade-grid">
+
+        <!-- CARD 1 -->
+        <div class="mini-card">
+            <img src="/public/assets/images/snake.abc.gif">
+            <div class="mini-info">
+                <h2>Snake.exe</h2>
+                <p>Uma versão duvidosa do clássico que provavelmente contém malware recreativo.</p>
+                <a href="snake.html" class="play-btn">Executar</a>
+            </div>
+        </div>
+
+        <!-- CARD 2 -->
+        <div class="mini-card locked">
+            <img src="/public/assets/images/cat2.abc.gif">
+            <div class="mini-info">
+                <h2>Pong404</h2>
+                <p>Arquivo corrompido em restauração.</p>
+                <span class="soon">Em breve</span>
+            </div>
+        </div>
+
+        <!-- CARD 3 -->
+        <div class="mini-card locked">
+            <img src="/public/assets/images/animeglitch.gif">
+            <div class="mini-info">
+                <h2>Memory Glitch</h2>
+                <p>Memórias visuais instáveis detectadas.</p>
+                <span class="soon">Em breve</span>
+            </div>
+        </div>
+
+        <!-- CARD 4 -->
+        <div class="mini-card locked">
+            <img src="/public/assets/images/8bit.gif">
+            <div class="mini-info">
+                <h2>Virus Clicker</h2>
+                <p>Contenção de ameaças em andamento.</p>
+                <span class="soon">Em breve</span>
+            </div>
+        </div>
+
+    </section>
+
+<script>
+const hover = document.getElementById("hoverSound");
+const click = document.getElementById("clickSound");
+
+document.querySelectorAll("a, .play-btn").forEach(el => {
+    el.addEventListener("mouseenter", () => {
+        hover.currentTime = 0;
+        hover.play();
+    });
+
+    el.addEventListener("click", () => {
+        click.currentTime = 0;
+        click.play();
+    });
+});
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+<div id="tsparticles"></div>
+
+<script>
+tsParticles.load("tsparticles", {
+  background: { color: "transparent" },
+  particles: {
+    number: { value: 60 },
+    color: { value: "#00ffff" },
+    links: { enable: true, color: "#00ffff", distance: 150 },
+    move: { enable: true, speed: 1 },
+    size: { value: 2 },
+    opacity: { value: 0.3 }
+  }
+});
+</script>
+
+</body>
+</html>
