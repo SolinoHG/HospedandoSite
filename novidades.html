@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Novidades - HegueZone</title>
+    <link rel="stylesheet" href="novidades.css">
+    <link rel="icon" href="/public/assets/images/iconemoji.png">
+</head>
+<body>
+
+<header class="navbar">
+    <div class="logo">✨ HegueZone Updates</div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="game.html">Catálogo</a>
+        <a href="jogos.html">Jogos</a>
+        <a href="populares.html">Populares</a>
+        <a href="novidades.html" class="active">Novidades</a>
+    </nav>
+</header>
+
+<div class="scan-line"></div>
+
+<div class="warning-bar">
+    ✨ NOVOS ARQUIVOS FORAM DETECTADOS — MONITORAMENTO DE LIBERAÇÕES ATIVO
+</div>
+
+<div class="system-hud">
+    <div class="hud-box">
+        <span id="clock">00:00:00</span>
+        <small>SYSTEM TIME</small>
+    </div>
+
+    <div class="hud-box">
+        <span class="online-text">ONLINE</span>
+        <small>STATUS</small>
+    </div>
+</div>
+
+<div class="particles">
+    <span></span><span></span><span></span><span></span><span></span>
+    <span></span><span></span><span></span><span></span><span></span>
+</div>
+
+<header class="news-header">
+    <h1>CENTRAL DE LIBERAÇÕES</h1>
+    <p>Arquivos recentemente adicionados ou atualizados na HegueZone.</p>
+
+    <div class="global-panel">
+        <div class="panel-box">
+            <span class="big-number">04</span>
+            <small>Arquivos Novos</small>
+        </div>
+
+        <div class="panel-box">
+            <span class="big-number">12</span>
+            <small>Servidores Ativos</small>
+        </div>
+
+        <div class="panel-box">
+            <span class="big-number">92%</span>
+            <small>Upload Médio</small>
+        </div>
+
+        <div class="panel-box">
+            <span class="big-number">545</span>
+            <small>Usuários Monitorando</small>
+        </div>
+    </div>
+</header>
+
+<section class="timeline-area">
+
+    <div class="timeline-line"></div>
+
+    <div class="update-content">
+    <span class="tag hot-tag">HOT</span>
+    <span class="date">15/05 • Upload Detectado</span>
+    <img src="https://cdn2.unrealengine.com/egs-mortalkombat1defintiveedition-netherrealmstudiosqloc-editions-g1a-00-1920x1080-4de805dffaf7.jpg">
+
+    <h2>Mortal Kombat 1</h2>
+    <p>Novo pacote de combate recém inserido no sistema.</p>
+
+    <div class="tech-stats">
+        <span>Integridade: 97%</span>
+        <span>Servidor: ONLINE</span>
+        <span>Usuários aguardando: 182</span>
+    </div>
+
+    <div class="upload-bar">
+        <div class="upload-fill" style="width:97%;"></div>
+    </div>
+</div>
+
+   <div class="update-content">
+    <span class="tag new-tag">NOVO</span>
+    <span class="date">15/05 • Liberação Recente</span>
+    <img src="https://cdn1.epicgames.com/offer/b2818b59c0bb420e9647983dfd254931/EGS_Octopus_InsomniacGamesNixxesSoftware_S1_2560x1440-f27da78f484626718d1e22e7d6950ca5">
+
+    <h2>Spider Man 2</h2>
+    <p>Arquivo de ação urbana adicionado ao catálogo.</p>
+
+    <div class="tech-stats">
+        <span>Integridade: 94%</span>
+        <span>Servidor: ONLINE</span>
+        <span>Usuários aguardando: 140</span>
+    </div>
+
+    <div class="upload-bar">
+        <div class="upload-fill" style="width:94%;"></div>
+    </div>
+</div>
+
+   <div class="update-content">
+    <span class="tag update-tag">UPDATE</span>
+    <span class="date">15/05 • Conteúdo Atualizado</span>
+    <img src="https://www.nme.com/wp-content/uploads/2021/11/GTA-The-Trilogy-2-2000x1270-1.jpg">
+
+    <h2>GTA Trilogy Definitive</h2>
+    <p>Pacote remasterizado agora disponível no servidor.</p>
+
+    <div class="tech-stats">
+        <span>Integridade: 91%</span>
+        <span>Servidor: ESTÁVEL</span>
+        <span>Usuários aguardando: 126</span>
+    </div>
+
+    <div class="upload-bar">
+        <div class="upload-fill" style="width:91%;"></div>
+    </div>
+</div>
+
+   <div class="update-content">
+    <span class="tag beta-tag">ACESSO</span>
+    <span class="date">15/5 • Acesso Antecipado</span>
+    <img src="https://wallpapers.com/images/hd/caption-ethan-winters-exploring-the-eerie-village-in-resident-evil-village-1lny39dkjzusfzqk.jpg">
+
+    <h2>Resident Evil Village</h2>
+    <p>Arquivo sombrio liberado para replicação limitada.</p>
+
+    <div class="tech-stats">
+        <span>Integridade: 89%</span>
+        <span>Servidor: LIMITADO</span>
+        <span>Usuários aguardando: 97</span>
+    </div>
+
+    <div class="upload-bar">
+        <div class="upload-fill" style="width:89%;"></div>
+    </div>
+</div>
+
+</section>
+
+<script>
+function updateClock(){
+    const now = new Date();
+    const h = String(now.getHours()).padStart(2,'0');
+    const m = String(now.getMinutes()).padStart(2,'0');
+    const s = String(now.getSeconds()).padStart(2,'0');
+    document.getElementById("clock").innerText = `${h}:${m}:${s}`;
+}
+setInterval(updateClock,1000);
+updateClock();
+</script>
+
+</body>
+</html>

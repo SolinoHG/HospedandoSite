@@ -328,6 +328,14 @@ nav a:hover::after{
     from{width:0;}
 }
 
+body{
+cursor: url("./public/assets/images/cursorGG.png"), auto;
+}
+
+
+a,button,input{
+cursor:url("./public/assets/images/cursorGG.png"), pointer;
+}
 
 /* responsivo */
 @media(max-width:1000px){
