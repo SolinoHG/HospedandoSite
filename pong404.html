@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pong404 - HegueZone Arcade</title>
+<link rel="stylesheet" href="pong404.css">
+<link rel="icon" type="image/png" href="public/assets/images/favicon6.png">
+
+</head>
+<body>
+
+    <canvas id="matrixBg"></canvas>
+
+<header class="navbar">
+    <div class="logo">🎮 HegueZone Arcade</div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="game.html">Catálogo</a>
+        <a href="jogos.html">Jogos</a>
+        <a href="populares.html">Populares</a>
+        <a href="novidades.html">Novidades</a>
+    </nav>
+</header>
+
+<div class="warning-bar">
+⚠ ARQUIVO RETRÔ CORROMPIDO — BLOCOS DE MEMÓRIA RECONSTRUÍDOS
+</div>
+
+<div class="pong-wrapper">
+    <h1>PONG404</h1>
+    <p>Sistema de colisão retrô reiniciado internamente.</p>
+
+    <div class="hud">
+        <span>SCORE: <b id="score">0</b></span>
+        <span>VIDAS: <b id="lives">3</b></span>
+    </div>
+
+    <canvas id="pongGame" width="1000" height="550"></canvas>
+
+    <div class="pong-area">
+
+    <div class="system-hud">
+        <div class="hud-box">
+            <span>INTEGRIDADE</span>
+            <strong id="integrity">97%</strong>
+        </div>
+
+        <div class="hud-box">
+            <span>BLOCOS</span>
+            <strong id="blocksLeft">36</strong>
+        </div>
+
+        <div class="hud-box">
+            <span>RESTAURAÇÃO</span>
+            <strong id="restore">0%</strong>
+        </div>
+
+        <div class="hud-box online">
+            <span>STATUS</span>
+            <strong>ONLINE</strong>
+        </div>
+    </div>
+
+    <canvas id="game" width="650" height="320"></canvas>
+
+</div>
+
+    <a href="jogos.html" class="back-btn">← Voltar ao Arcade</a>
+</div>
+
+<script src="pong404.js"></script>
+</body>
+</html>

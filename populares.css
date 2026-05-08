@@ -365,3 +365,12 @@ cursor:url("./public/assets/images/cursorGG.png"), pointer;
         padding:15px 0;
     }
 }
+
+.hud-box.online{
+    animation:onlinePulse 1.5s infinite alternate;
+}
+
+@keyframes onlinePulse{
+    from{box-shadow:0 0 10px rgba(0,255,120,0.1);}
+    to{box-shadow:0 0 22px rgba(0,255,120,0.4);}
+}

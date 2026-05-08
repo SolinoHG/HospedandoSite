@@ -1,0 +1,772 @@
+/* RESET */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#020202;
+    color:white;
+    font-family:'Orbitron',sans-serif;
+    overflow-x:hidden;
+    min-height:100vh;
+    position:relative;
+}
+
+/* MATRIX */
+
+#matrixCanvas{
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    z-index:-3;
+    opacity:.18;
+}
+
+/* FUNDO GLOW */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(255,0,80,.12),
+    transparent 60%);
+
+    z-index:-2;
+}
+
+/* SCANLINE */
+
+.scanline{
+    position:fixed;
+    inset:0;
+
+    background:
+    repeating-linear-gradient(
+    to bottom,
+    rgba(255,255,255,.02),
+    rgba(255,255,255,.02) 1px,
+    transparent 2px,
+    transparent 4px);
+
+    pointer-events:none;
+    z-index:100;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+    height:78px;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:0 35px;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    background:rgba(0,0,0,.72);
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(0,255,255,.12);
+
+    z-index:50;
+}
+
+.logo{
+    font-size:20px;
+    font-weight:900;
+
+    color:#00f7ff;
+
+    text-shadow:
+    0 0 10px #00f7ff,
+    0 0 20px #00f7ff;
+}
+
+nav{
+    display:flex;
+    gap:28px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#b9c5c9;
+    font-size:14px;
+    transition:.25s;
+    position:relative;
+}
+
+nav a:hover,
+nav .active{
+    color:#00f7ff;
+}
+
+nav .active::after{
+    content:"";
+    position:absolute;
+    left:0;
+    bottom:-8px;
+
+    width:100%;
+    height:2px;
+
+    background:#00f7ff;
+
+    box-shadow:0 0 10px #00f7ff;
+}
+
+/* WARNING */
+
+.warning-bar{
+    width:100%;
+    height:26px;
+
+    margin-top:78px;
+
+    background:rgba(120,0,0,.18);
+
+    border-top:1px solid rgba(255,0,0,.15);
+    border-bottom:1px solid rgba(255,0,0,.15);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    color:#ff3c3c;
+    font-size:11px;
+    letter-spacing:2px;
+}
+
+/* HERO */
+
+.hero-virus{
+    text-align:center;
+    padding-top:70px;
+}
+
+.virus-title{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.virus-title span{
+    font-size:88px;
+    font-weight:900;
+    letter-spacing:6px;
+
+    color:#00f7ff;
+
+    text-shadow:
+    0 0 10px #00f7ff,
+    0 0 25px #00f7ff,
+    0 0 55px rgba(0,247,255,.8);
+
+    animation:
+    flicker 3s infinite,
+    floaty 4s ease-in-out infinite;
+
+    position:relative;
+}
+
+.virus-title span::before{
+    content:attr(data-text);
+
+    position:absolute;
+    left:-3px;
+    top:0;
+
+    color:#ff004c;
+    opacity:.5;
+
+    z-index:-1;
+}
+
+.virus-title span::after{
+    content:attr(data-text);
+
+    position:absolute;
+    left:3px;
+    top:0;
+
+    color:#00ffff;
+    opacity:.35;
+
+    z-index:-2;
+}
+
+.virus-subtitle{
+    margin-top:12px;
+
+    color:#7f8d92;
+    letter-spacing:2px;
+    font-size:14px;
+}
+
+/* HUD */
+
+.hud-panel{
+    margin-top:45px;
+
+    display:flex;
+    justify-content:center;
+    gap:28px;
+    flex-wrap:wrap;
+}
+
+.hud-box{
+    width:150px;
+    height:95px;
+
+    border:1px solid rgba(0,255,255,.12);
+
+    background:rgba(0,0,0,.45);
+    backdrop-filter:blur(10px);
+
+    border-radius:18px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+    0 0 25px rgba(0,255,255,.08);
+}
+
+.hud-box h3{
+    font-size:38px;
+    color:#00f7ff;
+
+    text-shadow:
+    0 0 10px #00f7ff;
+}
+
+.hud-box span{
+    margin-top:8px;
+    font-size:12px;
+    letter-spacing:2px;
+    color:#8ba2a8;
+}
+
+.hud-box.danger h3{
+    color:#ff004c;
+
+    text-shadow:
+    0 0 10px #ff004c,
+    0 0 20px #ff004c;
+}
+
+/* MAIN */
+
+.virus-layout{
+    margin-top:60px;
+
+    display:grid;
+    grid-template-columns:280px 1fr 320px;
+    gap:35px;
+
+    padding:0 60px;
+}
+
+/* UPGRADES */
+
+.upgrade-panel{
+    background:rgba(0,0,0,.42);
+    border:1px solid rgba(0,255,255,.08);
+
+    border-radius:25px;
+
+    padding:25px;
+
+    height:fit-content;
+
+    box-shadow:
+    0 0 25px rgba(0,255,255,.08);
+}
+
+.upgrade-panel h2{
+    color:#00f7ff;
+    margin-bottom:25px;
+
+    font-size:20px;
+
+    text-shadow:0 0 10px #00f7ff;
+}
+
+.upgrade-btn{
+    width:100%;
+    height:80px;
+
+    margin-bottom:18px;
+
+    border:none;
+    border-radius:18px;
+
+    background:
+    linear-gradient(145deg,
+    rgba(0,255,255,.1),
+    rgba(255,0,80,.08));
+
+    color:white;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    font-family:'Orbitron',sans-serif;
+}
+
+.upgrade-btn:hover{
+    transform:translateY(-4px) scale(1.02);
+
+    box-shadow:
+    0 0 25px rgba(0,255,255,.25);
+}
+
+.upgrade-btn span{
+    font-size:15px;
+    margin-bottom:6px;
+}
+
+.upgrade-btn small{
+    color:#00f7ff;
+}
+
+/* CENTRO */
+
+.virus-center{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+
+/* CORE */
+
+.virus-core-wrap{
+    position:relative;
+    width:320px;
+    height:320px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* RINGS */
+
+.pulse-ring{
+    position:absolute;
+
+    width:260px;
+    height:260px;
+
+    border-radius:50%;
+
+    border:2px solid rgba(255,0,80,.35);
+
+    animation:pulseRing 3s linear infinite;
+
+    box-shadow:
+    0 0 25px rgba(255,0,80,.25),
+    inset 0 0 25px rgba(255,0,80,.15);
+}
+
+.pulse-ring.two{
+    width:340px;
+    height:340px;
+
+    animation-delay:1.2s;
+
+    border-color:rgba(0,255,255,.25);
+
+    box-shadow:
+    0 0 25px rgba(0,255,255,.2),
+    inset 0 0 25px rgba(0,255,255,.08);
+}
+
+/* BOTÃO PRINCIPAL */
+
+#virusButton{
+    width:230px;
+    height:230px;
+
+    border:none;
+    border-radius:50%;
+
+    cursor:pointer;
+
+    position:relative;
+
+    background:
+    radial-gradient(circle at center,
+    rgba(255,0,80,.25),
+    rgba(0,0,0,.95));
+
+    transition:.12s;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    box-shadow:
+    0 0 25px rgba(255,0,80,.35),
+    0 0 55px rgba(255,0,80,.18),
+    inset 0 0 30px rgba(255,0,80,.15);
+
+    overflow:hidden;
+}
+
+/* GLOW INTERNO */
+
+#virusButton::before{
+    content:"";
+
+    position:absolute;
+    inset:0;
+
+    background:
+    radial-gradient(circle,
+    rgba(255,255,255,.12),
+    transparent 70%);
+
+    mix-blend-mode:screen;
+}
+
+/* HOVER */
+
+#virusButton:hover{
+    transform:scale(1.05);
+
+    box-shadow:
+    0 0 40px rgba(255,0,80,.55),
+    0 0 90px rgba(255,0,80,.25),
+    inset 0 0 40px rgba(255,0,80,.2);
+}
+
+/* CLICK */
+
+#virusButton:active{
+    transform:scale(.94);
+}
+
+/* ÍCONE */
+
+.virus-core{
+    font-size:110px;
+
+    color:#ff004c;
+
+    text-shadow:
+    0 0 15px #ff004c,
+    0 0 35px #ff004c,
+    0 0 75px rgba(255,0,80,.8);
+
+    animation:
+    virusPulse 2s infinite ease-in-out,
+    flicker 3s infinite;
+}
+
+/* TEXTO */
+
+.threat-text{
+    margin-top:30px;
+
+    color:#00f7ff;
+
+    font-size:14px;
+    letter-spacing:4px;
+
+    text-shadow:
+    0 0 10px #00f7ff;
+
+    animation:flicker 4s infinite;
+}
+
+/* TERMINAL */
+
+.terminal-panel{
+    background:rgba(0,0,0,.5);
+
+    border:1px solid rgba(0,255,255,.08);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    box-shadow:
+    0 0 30px rgba(0,255,255,.08);
+
+    height:520px;
+}
+
+.terminal-header{
+    height:55px;
+
+    background:
+    linear-gradient(90deg,
+    rgba(255,0,80,.18),
+    rgba(0,255,255,.12));
+
+    border-bottom:1px solid rgba(0,255,255,.08);
+
+    display:flex;
+    align-items:center;
+
+    padding-left:22px;
+
+    color:#00f7ff;
+    font-size:13px;
+    letter-spacing:2px;
+}
+
+.terminal-body{
+    padding:22px;
+
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+
+    font-size:13px;
+    line-height:1.7;
+
+    color:#00ff9d;
+
+    font-family:monospace;
+
+    overflow:auto;
+
+    height:100%;
+}
+
+.terminal-body p{
+    animation:terminalFlicker 2s infinite;
+}
+
+/* ALERTA */
+
+.alert-panel{
+    width:85%;
+    height:34px;
+
+    margin:55px auto 0 auto;
+
+    border-radius:50px;
+
+    overflow:hidden;
+
+    position:relative;
+
+    border:1px solid rgba(255,0,80,.25);
+
+    background:rgba(0,0,0,.45);
+
+    box-shadow:
+    0 0 20px rgba(255,0,80,.18);
+}
+
+.alert-fill{
+    position:absolute;
+    left:0;
+    top:0;
+
+    width:15%;
+    height:100%;
+
+    background:
+    linear-gradient(90deg,
+    #ff004c,
+    #ff5c8a);
+
+    box-shadow:
+    0 0 20px #ff004c;
+}
+
+.alert-panel span{
+    position:absolute;
+    inset:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:12px;
+    letter-spacing:3px;
+
+    color:white;
+
+    z-index:2;
+}
+
+/* BOTÃO VOLTAR */
+
+.back-wrap{
+    width:100%;
+    display:flex;
+    justify-content:center;
+
+    padding:45px 0 70px 0;
+}
+
+.back-btn{
+    width:260px;
+    height:62px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    text-decoration:none;
+
+    border-radius:18px;
+
+    background:
+    linear-gradient(145deg,
+    rgba(0,255,255,.18),
+    rgba(255,0,80,.12));
+
+    border:1px solid rgba(0,255,255,.2);
+
+    color:#00f7ff;
+
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:2px;
+
+    transition:.25s;
+
+    box-shadow:
+    0 0 20px rgba(0,255,255,.12);
+}
+
+.back-btn:hover{
+    transform:translateY(-5px) scale(1.03);
+
+    box-shadow:
+    0 0 35px rgba(0,255,255,.28);
+}
+
+/* ANIMAÇÕES */
+
+@keyframes pulseRing{
+
+    0%{
+        transform:scale(.9);
+        opacity:.8;
+    }
+
+    100%{
+        transform:scale(1.15);
+        opacity:0;
+    }
+
+}
+
+@keyframes virusPulse{
+
+    0%{
+        transform:scale(1);
+    }
+
+    50%{
+        transform:scale(1.08);
+    }
+
+    100%{
+        transform:scale(1);
+    }
+
+}
+
+@keyframes flicker{
+
+    0%,18%,22%,25%,53%,57%,100%{
+        opacity:1;
+    }
+
+    20%,24%,55%{
+        opacity:.35;
+    }
+
+}
+
+@keyframes floaty{
+
+    0%{
+        transform:translateY(0px);
+    }
+
+    50%{
+        transform:translateY(-6px);
+    }
+
+    100%{
+        transform:translateY(0px);
+    }
+
+}
+
+@keyframes terminalFlicker{
+
+    0%{
+        opacity:1;
+    }
+
+    50%{
+        opacity:.7;
+    }
+
+    100%{
+        opacity:1;
+    }
+
+}
+
+/* RESPONSIVO */
+
+@media(max-width:1200px){
+
+    .virus-layout{
+        grid-template-columns:1fr;
+    }
+
+    .terminal-panel{
+        height:350px;
+    }
+
+}
+
+@media(max-width:700px){
+
+    .virus-title span{
+        font-size:54px;
+    }
+
+    #virusButton{
+        width:180px;
+        height:180px;
+    }
+
+    .virus-core{
+        font-size:80px;
+    }
+
+}

@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Virus Clicker - HegueZone</title>
+
+<link rel="stylesheet" href="virusclicker.css">
+
+<link rel="icon" href="public/assets/images/favicon8.webp">
+
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- MATRIX BACKGROUND -->
+<canvas id="matrixCanvas"></canvas>
+
+<!-- SCAN -->
+<div class="scanline"></div>
+
+<!-- WARNING BAR -->
+<div class="warning-bar">
+☣ SYSTEM INFECTED — UNKNOWN DIGITAL ENTITY DETECTED
+</div>
+
+<!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="logo">
+        ☣ HegueZone Antivirus
+    </div>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="game.html">Catálogo</a>
+        <a href="jogos.html" class="active">Jogos</a>
+        <a href="populares.html">Populares</a>
+        <a href="novidades.html">Novidades</a>
+    </nav>
+
+</header>
+
+<!-- HERO -->
+<section class="hero-virus">
+
+    <div class="virus-title">
+        <span data-text="VIRUS">VIRUS</span>
+        <span data-text="CLICKER">CLICKER</span>
+    </div>
+
+    <p class="virus-subtitle">
+        Entidade digital hostil consumindo recursos do sistema.
+    </p>
+
+</section>
+
+<!-- HUD -->
+<section class="hud-panel">
+
+    <div class="hud-box">
+        <h3 id="virusCount">0</h3>
+        <span>AMEAÇAS</span>
+    </div>
+
+    <div class="hud-box">
+        <h3 id="ppsCount">0</h3>
+        <span>POR SEGUNDO</span>
+    </div>
+
+    <div class="hud-box danger">
+        <h3 id="infectionLevel">3%</h3>
+        <span>INFECÇÃO</span>
+    </div>
+
+</section>
+
+<!-- MAIN -->
+<section class="virus-layout">
+
+    <!-- LEFT UPGRADES -->
+    <aside class="upgrade-panel">
+
+        <h2>UPGRADES.EXE</h2>
+
+        <button class="upgrade-btn" id="autoClickUpgrade">
+            <span>🧠 Neural Scanner</span>
+            <small>+1 PPS</small>
+        </button>
+
+        <button class="upgrade-btn" id="firewallUpgrade">
+            <span>🛡 Firewall Quantum</span>
+            <small>+5 PPS</small>
+        </button>
+
+        <button class="upgrade-btn" id="serverUpgrade">
+            <span>💾 Server Cleaner</span>
+            <small>+10 PPS</small>
+        </button>
+
+        <button class="upgrade-btn" id="aiUpgrade">
+            <span>🤖 AntiVirus AI</span>
+            <small>+25 PPS</small>
+        </button>
+
+    </aside>
+
+    <!-- CENTER -->
+    <main class="virus-center">
+
+        <div class="virus-core-wrap">
+
+            <div class="pulse-ring"></div>
+            <div class="pulse-ring two"></div>
+
+            <button id="virusButton">
+
+                <div class="virus-core">
+                    ☣
+                </div>
+
+            </button>
+
+        </div>
+
+        <div class="threat-text">
+            CLIQUE PARA PURGAR A INFECÇÃO
+        </div>
+
+    </main>
+
+    <!-- RIGHT TERMINAL -->
+    <aside class="terminal-panel">
+
+        <div class="terminal-header">
+            terminal.sys
+        </div>
+
+        <div class="terminal-body" id="terminalLog">
+
+            <p>> scanning memory sectors...</p>
+            <p>> corrupted files detected...</p>
+            <p>> quantum malware identified...</p>
+            <p>> preparing neural purge...</p>
+
+        </div>
+
+    </aside>
+
+</section>
+
+<!-- ALERT BAR -->
+<section class="alert-panel">
+
+    <div class="alert-fill" id="alertFill"></div>
+
+    <span id="alertText">
+        DIGITAL CORRUPTION DETECTED
+    </span>
+
+</section>
+
+<!-- BACK BUTTON -->
+<div class="back-wrap">
+
+    <a href="jogos.html" class="back-btn">
+        ← VOLTAR AO ARCADE
+    </a>
+
+</div>
+
+<script src="virusclicker.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,238 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Orbitron',sans-serif;}
+
+body{
+    background:#000;
+    color:white;
+}
+
+.navbar{
+    width:100%;
+    padding:20px 60px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    background:rgba(0,0,0,0.75);
+    border-bottom:1px solid rgba(0,255,255,0.15);
+}
+
+.logo{
+    font-size:28px;
+    color:#00f7ff;
+    text-shadow:0 0 10px #00f7ff;
+}
+
+nav{
+    display:flex;
+    gap:35px;
+}
+
+nav a{
+    color:#d9d9d9;
+    text-decoration:none;
+}
+
+.warning-bar{
+    width:100%;
+    text-align:center;
+    padding:8px;
+    font-size:11px;
+    color:#ff4d4d;
+    background:rgba(30,0,0,0.4);
+}
+
+.pong-wrapper{
+    width:90%;
+    margin:35px auto;
+    text-align:center;
+}
+
+.pong-wrapper h1{
+    font-size:58px;
+    color:#00f7ff;
+    text-shadow:0 0 15px #00f7ff;
+}
+
+.pong-wrapper p{
+    color:#777;
+    margin:10px 0 20px;
+}
+
+.hud{
+    display:flex;
+    justify-content:center;
+    gap:50px;
+    margin-bottom:20px;
+    font-size:20px;
+}
+
+canvas{
+    background:#050505;
+    border:2px solid rgba(0,255,255,0.2);
+    border-radius:20px;
+    box-shadow:0 0 30px rgba(0,255,255,0.06);
+}
+
+.back-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 30px;
+    background:#00f7ff;
+    color:#000;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+body::before{
+    content:'';
+    position:fixed;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:
+    linear-gradient(rgba(0,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,0.03) 1px, transparent 1px);
+    background-size:40px 40px;
+    animation:gridMove 8s linear infinite;
+    z-index:-1;
+}
+
+@keyframes gridMove{
+    from{transform:translateY(0);}
+    to{transform:translateY(40px);}
+}
+
+canvas{
+    background:radial-gradient(circle at center,#020202,#000);
+    border:2px solid rgba(0,255,255,0.2);
+    border-radius:20px;
+    box-shadow:
+    0 0 20px rgba(0,255,255,0.08),
+    inset 0 0 30px rgba(0,255,255,0.03);
+}
+
+.back-btn{
+    display:block;
+    width:220px;
+    margin:25px auto;
+    text-align:center;
+    padding:14px 30px;
+    background:#00f7ff;
+    color:#000;
+    border-radius:12px;
+    text-decoration:none;
+    font-weight:bold;
+    box-shadow:0 0 15px rgba(0,247,255,0.4);
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    transform:scale(1.06);
+}
+
+.pong-wrapper{
+    width:100%;
+    max-width:1200px;
+    margin:35px auto;
+    text-align:center;
+}
+
+.pong-wrapper h1{
+    font-size:58px;
+    color:#00f7ff;
+    text-shadow:0 0 15px #00f7ff;
+    animation:titlePulse 2s infinite alternate;
+}
+
+@keyframes titlePulse{
+    from{
+        text-shadow:0 0 8px #00f7ff;
+    }
+    to{
+        text-shadow:0 0 25px #00f7ff,0 0 40px #00f7ff;
+    }
+}
+
+.back-btn{
+    display:block;
+    width:220px;
+    margin:30px auto;
+    text-align:center;
+    padding:14px;
+    background:#00f7ff;
+    color:#000;
+    font-family:'Orbitron',sans-serif;
+    font-weight:bold;
+    text-decoration:none;
+    border-radius:12px;
+    box-shadow:0 0 20px #00f7ff;
+    transition:0.3s;
+}
+
+.back-btn:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 35px #00f7ff;
+}
+
+#matrixBg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    z-index:-2;
+    opacity:0.12;
+}
+
+body{
+    background:#000;
+    overflow-x:hidden;
+}
+
+.pong-area{
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:30px;
+    margin-top:20px;
+    flex-wrap:wrap;
+}
+
+.system-hud{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+    margin-top:10px;
+}
+
+.hud-box{
+    width:170px;
+    padding:16px;
+    background:rgba(0,0,0,0.75);
+    border:1px solid rgba(0,255,255,0.15);
+    border-radius:14px;
+    box-shadow:0 0 18px rgba(0,255,255,0.08);
+    text-align:center;
+}
+
+.hud-box span{
+    display:block;
+    font-size:11px;
+    color:#888;
+    margin-bottom:6px;
+    letter-spacing:2px;
+}
+
+.hud-box strong{
+    color:#00f7ff;
+    font-size:26px;
+    text-shadow:0 0 12px #00f7ff;
+}
+
+.hud-box.online strong{
+    color:#00ff88;
+    text-shadow:0 0 12px #00ff88;
+}
