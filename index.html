@@ -45,7 +45,7 @@
 </button>
 
 <audio id="bg-music" loop>
-  <source src="public/assets/audios/backmusic.mp3" type="audio/mpeg">
+  <source src="public/assets/audios/ncsmusic.mp3" type="audio/mpeg">
 </audio>
 
 <audio id="coin-sound">
@@ -841,7 +841,31 @@
 
 </script>
 
- <footer class="footer"> <p>© 2026 GuriZone Studio</p> <p class="dev-warning"> Este site está em desenvolvimento. Novas atualizações e melhorias serão adicionadas em breve. </p></footer> 
+ <footer class="footer">
+
+    <div class="ground"></div>
+    <div class="castle-bg"></div>
+
+    <div class="footer-stars">
+    <span style="top:10%;left:15%;"></span>
+    <span style="top:20%;left:70%;"></span>
+    <span style="top:40%;left:30%;"></span>
+    <span style="top:15%;left:50%;"></span>
+    <span style="top:35%;left:80%;"></span>
+    <span style="top:50%;left:60%;"></span>
+</div>
+
+    <div id="zelda">
+      <img src="/public/assets/images/zelda.gif">
+    </div>
+
+    <p>© 2026 GuriZone Studio</p>
+
+    <p class="dev-warning">
+      Este site está em desenvolvimento.
+    </p>
+
+</footer>
 
 <!-- SOM -->
 <audio id="themeSound">
@@ -1005,19 +1029,61 @@ document.addEventListener("DOMContentLoaded", () => {
   const pressStart = document.querySelector(".press-start");
   const loaderContent = document.querySelector(".loader-content");
 
+  // =====================================
+  // INICIA LOADING
+  // =====================================
+
   window.addEventListener("load", () => {
-    fill.style.width = "100%";
+
+    // anima barra
+    setTimeout(() => {
+      fill.style.width = "100%";
+    }, 300);
+
+    // libera botão start
+    setTimeout(() => {
+      pressStart.classList.add("show-start");
+    }, 1800);
+
   });
 
+  // =====================================
+  // CLICK START
+  // =====================================
+
   pressStart.addEventListener("click", () => {
+
+    // evita clicar varias vezes
+    pressStart.style.pointerEvents = "none";
+
+    // som
+    startSound.currentTime = 0;
     startSound.play();
 
-    // adiciona glitch
+    // efeito glitch
     loaderContent.classList.add("glitch-effect");
 
+    // flash cinematico
+    loader.classList.add("loader-flash");
+
+    // shake
+    loaderContent.classList.add("loader-shake");
+
+    // esconde loader
     setTimeout(() => {
+
       loader.classList.add("loader-hidden");
-    }, 400);
+
+      // mostra footer/site
+      document.body.classList.add("loaded");
+
+      // remove completamente
+      setTimeout(() => {
+        loader.style.display = "none";
+      }, 1200);
+
+    }, 700);
+
   });
 </script>
 
@@ -1123,6 +1189,71 @@ function closeJumpscare(){
     audio.currentTime = 0;
 }
 </script>
+
+<script>
+
+/* =========================================
+   PARTICULAS AAA
+========================================= */
+
+for(let i = 0; i < 40; i++){
+
+    const particle = document.createElement("div");
+
+    particle.classList.add("cyber-particle");
+
+    particle.style.left =
+    Math.random() * 100 + "vw";
+
+    particle.style.animationDuration =
+    (Math.random() * 10 + 8) + "s";
+
+    particle.style.animationDelay =
+    Math.random() * 5 + "s";
+
+    particle.style.opacity =
+    Math.random();
+
+    document.body.appendChild(particle);
+}
+
+</script>
+
+<script>
+
+/* =========================================
+   GERADOR DE PARTÍCULAS CYBERPUNK
+========================================= */
+
+for(let i = 0; i < 40; i++){
+
+    const particle = document.createElement("div");
+
+    particle.classList.add("cyber-particle");
+
+    particle.style.left = Math.random() * 100 + "vw";
+
+    particle.style.animationDuration =
+    (Math.random() * 10 + 8) + "s";
+
+    particle.style.opacity =
+    Math.random();
+
+    particle.style.transform =
+    `scale(${Math.random() * 1.5})`;
+
+    document.body.appendChild(particle);
+}
+
+</script>
+
+<!-- ========= PARTÍCULAS ========= -->
+<div id="particles-js"></div>
+
+<!-- ========= TS PARTICLES ========= -->
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js"></script>
+
+
 
 </body>
 </html>

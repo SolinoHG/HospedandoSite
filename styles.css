@@ -222,11 +222,11 @@ body{
 }
 
 body {
-    cursor: url("public/assets/images/cursorMR.png"), auto;
+    cursor: url("public/assets/images/alancursor.png"), auto;
 }
 
 button, a {
-    cursor: url("public/assets/images/cursorMR.png"), pointer;
+    cursor: url("public/assets/images/alancursor.png"), pointer;
 }
 
 /* CONTROLES */
@@ -981,6 +981,1155 @@ body.light-mode .btn-details:hover{
     color:#334155;
 }
 
+
+/* =========================================
+   FOOTER REAL DO SITE
+========================================= */
+
+.footer{
+
+    position: relative;
+
+    margin-top: 120px;
+
+    width: 100%;
+
+    padding:
+    90px 20px 35px;
+
+    overflow: hidden;
+
+    background:
+    linear-gradient(
+    to top,
+    rgba(0,0,0,0.95),
+    rgba(5,10,20,0.92),
+    rgba(5,10,20,0.65));
+
+    border-top:
+    2px solid rgba(0,255,200,0.18);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 8px;
+
+    z-index: 5;
+}
+
+/* LINHA ANIMADA */
+
+.footer::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -100%;
+
+    width: 100%;
+    height: 2px;
+
+    background:
+    linear-gradient(
+    90deg,
+    transparent,
+    #00ffee,
+    #00ff88,
+    transparent);
+
+    animation:
+    footerLine 5s linear infinite;
+}
+
+@keyframes footerLine{
+
+    100%{
+        left: 100%;
+    }
+}
+
+/* TEXTOS */
+
+.footer p{
+
+    margin: 0;
+
+    color: #d9d9d9;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+    0 0 8px rgba(0,255,200,0.4);
+}
+
+.dev-warning{
+
+    color: #00ffcc;
+
+    font-size: 11px;
+
+    opacity: 0.85;
+}
+
+/* =========================================
+   ZELDA NO FOOTER
+========================================= */
+
+#zelda{
+
+    position: absolute;
+
+    bottom: 15px;
+
+    left: 40px;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    animation:
+    zeldaFloat 3s ease-in-out infinite;
+}
+
+#zelda img{
+
+    width: 120px;
+
+    image-rendering: pixelated;
+
+    filter:
+    drop-shadow(0 0 12px rgba(0,255,200,0.45));
+}
+
+@keyframes zeldaFloat{
+
+    0%{
+        transform: translateY(0px);
+    }
+
+    50%{
+        transform: translateY(-10px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+/* =========================================
+   CHÃO
+========================================= */
+
+.ground{
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 18px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #00e5ff,
+    #7a5cff,
+    #ff00ff);
+
+    box-shadow:
+    0 0 10px #00e5ff,
+    0 0 20px #7a5cff,
+    0 0 30px #ff00ff;
+}
+
+/* =========================================
+   SEARCH PEQUENA RETRÔ CLEAN
+========================================= */
+
+#searchInput{
+
+    width: 220px;
+
+    padding: 10px 14px;
+
+    border-radius: 30px;
+
+    border:
+    2px solid rgba(0,255,200,0.14);
+
+    background:
+    rgba(255,255,255,0.96);
+
+    color: #111;
+
+    font-size: 13px;
+
+    font-weight: 500;
+
+    backdrop-filter: blur(8px);
+
+    transition:
+    transform 0.25s ease,
+    width 0.25s ease,
+    box-shadow 0.25s ease,
+    border 0.25s ease;
+
+    box-shadow:
+    0 0 12px rgba(0,255,200,0.08);
+
+}
+
+/* PLACEHOLDER */
+
+#searchInput::placeholder{
+
+    color:
+    rgba(0,0,0,0.42);
+}
+
+/* FOCUS */
+
+#searchInput:focus{
+
+    outline: none;
+
+    width: 260px;
+
+    transform:
+    scale(1.03);
+
+    border:
+    2px solid #00ffcc;
+
+    background:
+    rgba(255,255,255,1);
+
+    box-shadow:
+    0 0 12px rgba(0,255,204,0.55),
+    0 0 30px rgba(0,255,204,0.22);
+
+}
+
+/* =========================================
+   DARK MODE
+========================================= */
+
+body:not(.light-mode) #searchInput{
+
+    background:
+    rgba(255,255,255,0.97);
+
+    color:
+    #050505;
+
+    border:
+    2px solid rgba(0,255,200,0.18);
+
+    box-shadow:
+    0 0 10px rgba(0,255,200,0.08);
+}
+
+body:not(.light-mode) #searchInput::placeholder{
+
+    color:
+    rgba(0,0,0,0.45);
+}
+
+body:not(.light-mode) #searchInput:focus{
+
+    border:
+    2px solid #00ffee;
+
+    box-shadow:
+    0 0 14px rgba(0,255,238,0.65),
+    0 0 35px rgba(0,255,238,0.28);
+}
+
+/* =========================================
+   LIGHT MODE
+========================================= */
+
+body.light-mode #searchInput{
+
+    background:
+    rgba(255,255,255,0.88);
+
+    color:
+    #111827;
+
+    border:
+    2px solid rgba(0,119,255,0.14);
+
+    box-shadow:
+    0 0 10px rgba(59,130,246,0.08);
+}
+
+body.light-mode #searchInput::placeholder{
+
+    color:
+    rgba(0,0,0,0.42);
+}
+
+body.light-mode #searchInput:focus{
+
+    border:
+    2px solid #3b82f6;
+
+    box-shadow:
+    0 0 12px rgba(59,130,246,0.45),
+    0 0 28px rgba(96,165,250,0.22);
+
+}
+
+/* ZELDA LIGHT */
+
+body.light-mode #zelda img{
+
+    filter:
+    drop-shadow(0 0 12px rgba(0,119,255,0.4));
+}
+
+/* SEARCH LIGHT */
+
+body.light-mode #searchInput{
+
+    background:
+    rgba(255,255,255,0.9);
+
+    color: #111;
+
+    border:
+    2px solid rgba(0,0,0,0.08);
+
+    box-shadow:
+    0 0 10px rgba(0,0,0,0.05);
+}
+
+body.light-mode #searchInput::placeholder{
+
+    color:
+    rgba(0,0,0,0.45);
+}
+
+body.light-mode #searchInput:focus{
+
+    border:
+    2px solid #0077ff;
+
+    box-shadow:
+    0 0 12px rgba(0,119,255,0.4),
+    0 0 25px rgba(0,119,255,0.2);
+}
+
+/* =========================================
+   RESPONSIVO
+========================================= */
+
+@media(max-width:768px){
+
+    #zelda{
+
+        left: 10px;
+    }
+
+    #zelda img{
+
+        width: 85px;
+    }
+
+    #searchInput{
+
+        width: 180px;
+    }
+
+    #searchInput:focus{
+
+        width: 210px;
+    }
+}
+
+
+/* =========================================
+   FOOTER CINEMÁTICO AAA
+========================================= */
+
+.footer{
+
+    position: relative;
+
+    margin-top: 180px;
+
+    width: 100%;
+
+    min-height: 340px;
+
+    overflow: hidden;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding:
+    120px 20px 55px;
+
+    background:
+    radial-gradient(circle at top,
+    rgba(120,0,255,0.15) 0%,
+    rgba(0,229,255,0.08) 25%,
+    #050816 60%,
+    #000 100%);
+
+    border-top:
+    1px solid rgba(255,255,255,0.05);
+
+    z-index: 5;
+}
+
+/* =========================================
+   CÉU / GLOW
+========================================= */
+
+.footer::after{
+
+    content: "";
+
+    position: absolute;
+
+    top: -300px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 1200px;
+    height: 700px;
+
+    background:
+    radial-gradient(circle,
+    rgba(140,0,255,0.22),
+    rgba(0,229,255,0.14),
+    transparent 72%);
+
+    filter: blur(55px);
+
+    animation:
+    footerGlow 8s ease-in-out infinite alternate;
+
+    pointer-events: none;
+
+    z-index: 0;
+}
+
+@keyframes footerGlow{
+
+    0%{
+        transform:
+        translateX(-50%)
+        scale(1);
+    }
+
+    100%{
+        transform:
+        translateX(-50%)
+        scale(1.12);
+    }
+}
+
+/* =========================================
+   GRID RETRÔ
+========================================= */
+
+.footer::before{
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background-image:
+
+    linear-gradient(
+    rgba(0,229,255,0.06) 1px,
+    transparent 1px),
+
+    linear-gradient(
+    90deg,
+    rgba(0,229,255,0.06) 1px,
+    transparent 1px);
+
+    background-size: 42px 42px;
+
+    opacity: 0.45;
+
+    transform:
+    perspective(900px)
+    rotateX(70deg)
+    scale(2.2);
+
+    transform-origin: bottom;
+
+    bottom: -120px;
+
+    animation:
+    footerGrid 14s linear infinite;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+@keyframes footerGrid{
+
+    100%{
+        background-position-y: 42px;
+    }
+}
+
+/* =========================================
+   ESTRELAS
+========================================= */
+
+.footer-stars{
+
+    position: absolute;
+
+    inset: 0;
+
+    overflow: hidden;
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+.footer-stars span{
+
+    position: absolute;
+
+    border-radius: 50%;
+
+    background: white;
+
+    opacity: 0.8;
+
+    animation:
+    twinkle 2s infinite alternate;
+}
+
+/* tamanhos variados */
+
+.footer-stars span:nth-child(odd){
+
+    width: 2px;
+    height: 2px;
+
+    box-shadow:
+    0 0 8px white;
+}
+
+.footer-stars span:nth-child(even){
+
+    width: 4px;
+    height: 4px;
+
+    box-shadow:
+    0 0 15px #00e5ff;
+}
+
+@keyframes twinkle{
+
+    100%{
+        opacity: 0.2;
+        transform:
+        scale(1.8);
+    }
+}
+
+/* =========================================
+   CHÃO NEON
+========================================= */
+
+.ground{
+
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 26px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #00e5ff,
+    #7a5cff,
+    #ff00ff);
+
+    box-shadow:
+    0 0 15px #00e5ff,
+    0 0 30px #7a5cff,
+    0 0 50px #ff00ff;
+
+    z-index: 3;
+}
+
+/* brilho extra */
+
+.ground::after{
+
+    content: "";
+
+    position: absolute;
+
+    top: -10px;
+    left: 0;
+
+    width: 100%;
+    height: 10px;
+
+    background:
+    linear-gradient(
+    90deg,
+    rgba(0,229,255,0.8),
+    rgba(255,0,255,0.8));
+
+    filter: blur(10px);
+
+    opacity: 0.8;
+}
+
+/* =========================================
+   ZELDA
+========================================= */
+
+#zelda{
+
+    position: absolute;
+
+    bottom: 18px;
+    left: 40px;
+
+    z-index: 5;
+
+    pointer-events: none;
+
+    animation:
+    zeldaFloat 3s ease-in-out infinite;
+}
+
+#zelda img{
+
+    width: 135px;
+
+    image-rendering: pixelated;
+
+    filter:
+    drop-shadow(0 0 12px #00e5ff)
+    drop-shadow(0 0 28px #7a5cff);
+}
+
+@keyframes zeldaFloat{
+
+    0%{
+        transform: translateY(0);
+    }
+
+    50%{
+        transform: translateY(-12px);
+    }
+
+    100%{
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   TEXTOS
+========================================= */
+
+.footer p{
+
+    position: relative;
+
+    z-index: 5;
+
+    margin: 0;
+
+    color: #d9d9d9;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    text-shadow:
+    0 0 10px rgba(0,255,200,0.5);
+}
+
+.dev-warning{
+
+    color: #00ffcc;
+
+    font-size: 11px;
+}
+
+/* =========================================
+   LIGHT MODE AAA
+========================================= */
+
+body.light-mode .footer{
+
+    background:
+    linear-gradient(
+    to top,
+    #dbeafe 0%,
+    #eff6ff 35%,
+    #ffffff 100%);
+}
+
+/* glow azul */
+
+body.light-mode .footer::after{
+
+    background:
+    radial-gradient(circle,
+    rgba(0,119,255,0.20),
+    rgba(56,189,248,0.10),
+    transparent 72%);
+}
+
+/* grid azul */
+
+body.light-mode .footer::before{
+
+    background-image:
+
+    linear-gradient(
+    rgba(0,119,255,0.08) 1px,
+    transparent 1px),
+
+    linear-gradient(
+    90deg,
+    rgba(0,119,255,0.08) 1px,
+    transparent 1px);
+}
+
+/* CHÃO GRAMA */
+
+body.light-mode .ground{
+
+    height: 28px;
+
+    background:
+    linear-gradient(
+    180deg,
+    #22c55e,
+    #16a34a,
+    #15803d);
+
+    box-shadow:
+    0 0 12px rgba(34,197,94,0.45),
+    inset 0 2px 5px rgba(255,255,255,0.35);
+}
+
+/* DETALHE DA GRAMA */
+
+body.light-mode .ground::before{
+
+    content: "";
+
+    position: absolute;
+
+    top: -10px;
+    left: 0;
+
+    width: 100%;
+    height: 12px;
+
+    background:
+    repeating-linear-gradient(
+    90deg,
+    #22c55e 0px,
+    #22c55e 5px,
+    #16a34a 5px,
+    #16a34a 10px);
+
+    clip-path:
+    polygon(
+    0 100%,
+    5% 0,
+    10% 100%,
+    15% 0,
+    20% 100%,
+    25% 0,
+    30% 100%,
+    35% 0,
+    40% 100%,
+    45% 0,
+    50% 100%,
+    55% 0,
+    60% 100%,
+    65% 0,
+    70% 100%,
+    75% 0,
+    80% 100%,
+    85% 0,
+    90% 100%,
+    95% 0,
+    100% 100%);
+}
+
+/* zelda */
+
+body.light-mode #zelda img{
+
+    filter:
+    drop-shadow(0 0 10px rgba(0,119,255,0.4));
+}
+
+/* textos */
+
+body.light-mode .footer p{
+
+    color: #111827;
+}
+
+body.light-mode .dev-warning{
+
+    color: #0077ff;
+}
+
+
+/* =========================================
+   BACKGROUND AAA CYBERPUNK
+========================================= */
+
+body{
+
+    position: relative;
+
+    overflow-x: hidden;
+
+    min-height: 100vh;
+
+    background:
+    radial-gradient(circle at top,
+    #0f172a 0%,
+    #020617 45%,
+    #000814 100%);
+
+    color: white;
+}
+
+/* =========================================
+   GRID RETRÔ
+========================================= */
+
+body::before{
+
+    content: "";
+
+    position: fixed;
+
+    inset: 0;
+
+    background-image:
+
+    linear-gradient(
+    rgba(0,255,255,0.05) 1px,
+    transparent 1px),
+
+    linear-gradient(
+    90deg,
+    rgba(0,255,255,0.05) 1px,
+    transparent 1px);
+
+    background-size: 45px 45px;
+
+    animation:
+    gridMove 12s linear infinite;
+
+    z-index: -5;
+
+    pointer-events: none;
+}
+
+@keyframes gridMove{
+
+    100%{
+        transform: translateY(45px);
+    }
+}
+
+/* =========================================
+   GLOW GIGANTE
+========================================= */
+
+body::after{
+
+    content: "";
+
+    position: fixed;
+
+    width: 1200px;
+    height: 1200px;
+
+    top: -450px;
+    left: -300px;
+
+    background:
+    radial-gradient(circle,
+    rgba(0,255,255,0.18),
+    rgba(140,0,255,0.12),
+    transparent 70%);
+
+    filter: blur(60px);
+
+    animation:
+    cyberGlow 10s ease-in-out infinite alternate;
+
+    z-index: -6;
+
+    pointer-events: none;
+}
+
+@keyframes cyberGlow{
+
+    0%{
+
+        transform:
+        scale(1)
+        translate(0,0);
+    }
+
+    100%{
+
+        transform:
+        scale(1.2)
+        translate(120px,50px);
+    }
+}
+
+/* =========================================
+   ESTRELAS / PARTÍCULAS
+========================================= */
+
+.cyber-particle{
+
+    position: fixed;
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: #00ffee;
+
+    box-shadow:
+    0 0 10px #00ffee,
+    0 0 25px #00ffee;
+
+    opacity: 0.8;
+
+    animation:
+    particleFloat linear infinite;
+
+    z-index: -4;
+
+    pointer-events: none;
+}
+
+@keyframes particleFloat{
+
+    from{
+
+        transform:
+        translateY(100vh)
+        scale(0.5);
+    }
+
+    to{
+
+        transform:
+        translateY(-120vh)
+        scale(1.2);
+    }
+}
+
+/* =========================================
+   LIGHT MODE AAA
+========================================= */
+
+body.light-mode{
+
+    background:
+    linear-gradient(
+    180deg,
+    #eff6ff 0%,
+    #dbeafe 35%,
+    #f0f9ff 65%,
+    #ffffff 100%);
+
+    color: #111;
+}
+
+/* GRID AZUL */
+
+body.light-mode::before{
+
+    background-image:
+
+    linear-gradient(
+    rgba(0,119,255,0.12) 2px,
+    transparent 2px),
+
+    linear-gradient(
+    90deg,
+    rgba(0,119,255,0.12) 2px,
+    transparent 2px);
+
+    background-size: 45px 45px;
+
+    animation:
+    gridMove 10s linear infinite;
+}
+
+/* GLOW AZUL */
+
+body.light-mode::after{
+
+    width: 1200px;
+    height: 1200px;
+
+    top: -350px;
+    right: -250px;
+
+    left: auto;
+
+    background:
+    radial-gradient(circle,
+    rgba(0,119,255,0.18),
+    rgba(56,189,248,0.10),
+    transparent 70%);
+
+    filter: blur(70px);
+
+    animation:
+    lightGlow 8s ease-in-out infinite alternate;
+}
+
+@keyframes lightGlow{
+
+    0%{
+
+        transform:
+        scale(1)
+        translateY(0);
+    }
+
+    100%{
+
+        transform:
+        scale(1.2)
+        translateY(40px);
+    }
+}
+
+/* =========================================
+   PARTÍCULAS LIGHT
+========================================= */
+
+body.light-mode .cyber-particle{
+
+    background: #0077ff;
+
+    width: 5px;
+    height: 5px;
+
+    opacity: 0.9;
+
+    box-shadow:
+    0 0 12px #0077ff,
+    0 0 24px #38bdf8,
+    0 0 40px #38bdf8;
+}
+
+
+/* =========================================
+   CASTELO LIGHT MODE
+========================================= */
+
+.castle-bg{
+
+    display: none;
+}
+
+/* MOSTRA SÓ NO LIGHT MODE */
+
+body.light-mode .castle-bg{
+
+    display: block;
+
+    position: absolute;
+
+    bottom: 28px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 850px;
+    height: 320px;
+
+    background:
+    url("")
+    center bottom / contain
+    no-repeat;
+
+    opacity: 0.20;
+
+    z-index: 2;
+
+    pointer-events: none;
+
+    filter:
+    drop-shadow(0 0 25px rgba(0,119,255,0.18));
+}
+
+/* NÉVOA AZUL */
+
+body.light-mode .castle-bg::after{
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -30px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 900px;
+    height: 180px;
+
+    background:
+    radial-gradient(circle,
+    rgba(56,189,248,0.20),
+    rgba(255,255,255,0.12),
+    transparent 70%);
+
+    filter: blur(35px);
+
+    z-index: -1;
+}
+
 /* RESPONSIVO */
 @media(max-width:1100px){
     .hero-card{
@@ -1050,7 +2199,556 @@ body.light-mode .btn-details:hover{
 }
 
 
+/* =========================================
+   LIGHT MODE - CASTELO ZELDA
+========================================= */
 
+body.light-mode .footer{
+
+    position: relative;
+
+    background:
+    linear-gradient(
+    to top,
+    #dbeafe 0%,
+    #eff6ff 35%,
+    #ffffff 100%);
+
+    overflow: hidden;
+}
+
+/* CASTELO */
+
+body.light-mode .footer::after{
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 28px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 700px;
+    height: 260px;
+
+    background:
+    url("/public/assets/images/castelo.jpg")
+    center bottom / contain
+    no-repeat;
+
+    opacity: 0.22;
+
+    filter:
+    drop-shadow(0 0 25px rgba(0,119,255,0.25));
+
+    z-index: 1;
+
+    pointer-events: none;
+}
+
+/* NÉVOA */
+
+body.light-mode .footer::before{
+
+    content: "";
+
+    position: absolute;
+
+    bottom: 0;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 1200px;
+    height: 300px;
+
+    background:
+    radial-gradient(circle,
+    rgba(56,189,248,0.18),
+    rgba(255,255,255,0.1),
+    transparent 70%);
+
+    filter: blur(35px);
+
+    z-index: 0;
+
+    pointer-events: none;
+}
+
+/* TEXTOS ACIMA DO CASTELO */
+
+body.light-mode .footer p,
+body.light-mode .dev-warning{
+
+    position: relative;
+
+    z-index: 5;
+}
+
+/* ZELDA */
+
+body.light-mode #zelda{
+
+    z-index: 6;
+}
+
+/* GRAMA */
+
+body.light-mode .ground{
+
+    z-index: 6;
+}
+
+/* ===================================
+   LOADER CINEMÁTICO COMBINANDO
+   COM O SITE
+=================================== */
+
+#arcade-loader{
+
+    position: fixed;
+    inset: 0;
+
+    z-index: 999999;
+
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background:
+    radial-gradient(circle at top,
+    #0f172a 0%,
+    #020617 55%,
+    #000000 100%);
+
+    transition:
+    opacity 1s ease,
+    visibility 1s ease;
+}
+
+/* ===================================
+   GRID CYBERPUNK
+=================================== */
+
+#arcade-loader::before{
+
+    content: "";
+
+    position: absolute;
+    inset: 0;
+
+    background-image:
+
+    linear-gradient(
+    rgba(0,255,200,0.07) 1px,
+    transparent 1px),
+
+    linear-gradient(
+    90deg,
+    rgba(0,255,200,0.07) 1px,
+    transparent 1px);
+
+    background-size: 40px 40px;
+
+    animation:
+    loaderGrid 10s linear infinite;
+
+    opacity: 0.7;
+}
+
+@keyframes loaderGrid{
+
+    100%{
+        transform: translateY(40px);
+    }
+}
+
+/* ===================================
+   GLOW GIGANTE
+=================================== */
+
+#arcade-loader::after{
+
+    content: "";
+
+    position: absolute;
+
+    width: 900px;
+    height: 900px;
+
+    top: -300px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background:
+    radial-gradient(circle,
+    rgba(0,255,200,0.18),
+    rgba(0,140,255,0.10),
+    transparent 70%);
+
+    filter: blur(40px);
+
+    animation:
+    loaderGlow 6s ease-in-out infinite alternate;
+}
+
+@keyframes loaderGlow{
+
+    0%{
+        transform:
+        translateX(-50%)
+        scale(1);
+    }
+
+    100%{
+        transform:
+        translateX(-50%)
+        scale(1.15);
+    }
+}
+
+/* ===================================
+   CONTEÚDO
+=================================== */
+
+.loader-content{
+
+    position: relative;
+
+    z-index: 5;
+
+    text-align: center;
+
+    animation:
+    loaderAppear 1s ease;
+}
+
+@keyframes loaderAppear{
+
+    from{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===================================
+   TITULO
+=================================== */
+
+.loader-content h1{
+
+    font-size: 5rem;
+
+    margin-bottom: 10px;
+
+    color: #00ffcc;
+
+    letter-spacing: 6px;
+
+    text-transform: uppercase;
+
+    text-shadow:
+    0 0 10px #00ffcc,
+    0 0 25px #00ffcc,
+    0 0 50px #00ffee,
+    0 0 90px rgba(0,255,200,0.6);
+
+    animation:
+    pulseLogo 2s infinite;
+}
+
+@keyframes pulseLogo{
+
+    50%{
+        transform: scale(1.04);
+    }
+}
+
+/* ===================================
+   TEXTO ABAIXO
+=================================== */
+
+.loader-content p{
+
+    color: rgba(255,255,255,0.7);
+
+    font-size: 14px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 28px;
+}
+
+/* ===================================
+   BARRA
+=================================== */
+
+.loading-bar{
+
+    width: 340px;
+    height: 18px;
+
+    margin: auto;
+
+    border-radius: 999px;
+
+    overflow: hidden;
+
+    border:
+    2px solid rgba(0,255,200,0.5);
+
+    background:
+    rgba(255,255,255,0.04);
+
+    box-shadow:
+    0 0 20px rgba(0,255,200,0.2);
+}
+
+.loading-fill{
+
+    width: 0%;
+    height: 100%;
+
+    border-radius: 999px;
+
+    background:
+    linear-gradient(
+    90deg,
+    #00ffee,
+    #00ff88,
+    #00ffee);
+
+    background-size: 300%;
+
+    animation:
+    barMove 2s linear infinite;
+
+    transition:
+    width 2s ease;
+
+    box-shadow:
+    0 0 20px #00ffee,
+    0 0 35px rgba(0,255,200,0.5);
+}
+
+@keyframes barMove{
+
+    100%{
+        background-position: 300%;
+    }
+}
+
+/* ===================================
+   PRESS START
+=================================== */
+
+.press-start{
+
+    margin-top: 30px;
+
+    color: #00ffcc;
+
+    font-size: 1rem;
+
+    letter-spacing: 4px;
+
+    cursor: pointer;
+
+    opacity: 0;
+
+    transform: translateY(15px);
+
+    transition: 0.5s;
+
+    animation:
+    blink 1s infinite;
+}
+
+.press-start.show-start{
+
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+@keyframes blink{
+
+    50%{
+        opacity: 0.4;
+    }
+}
+
+/* ===================================
+   EFEITOS
+=================================== */
+
+.glitch-effect{
+
+    animation:
+    glitch 0.18s infinite;
+}
+
+@keyframes glitch{
+
+    0%{
+        transform: translate(0);
+    }
+
+    20%{
+        transform: translate(-3px,2px);
+    }
+
+    40%{
+        transform: translate(3px,-2px);
+    }
+
+    60%{
+        transform: translate(-2px,3px);
+    }
+
+    80%{
+        transform: translate(2px,-3px);
+    }
+
+    100%{
+        transform: translate(0);
+    }
+}
+
+/* ===================================
+   ESCONDER LOADER
+=================================== */
+
+.loader-hidden{
+
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* ===================================
+   LIGHT MODE
+=================================== */
+
+body.light-mode #arcade-loader{
+
+    background:
+    linear-gradient(
+    180deg,
+    #eff6ff 0%,
+    #dbeafe 35%,
+    #f8fafc 70%,
+    #ffffff 100%);
+}
+
+/* GRID */
+
+body.light-mode #arcade-loader::before{
+
+    background-image:
+
+    linear-gradient(
+    rgba(0,119,255,0.10) 1px,
+    transparent 1px),
+
+    linear-gradient(
+    90deg,
+    rgba(0,119,255,0.10) 1px,
+    transparent 1px);
+}
+
+/* GLOW */
+
+body.light-mode #arcade-loader::after{
+
+    background:
+    radial-gradient(circle,
+    rgba(0,119,255,0.20),
+    rgba(56,189,248,0.12),
+    transparent 70%);
+}
+
+/* TITULO */
+
+body.light-mode .loader-content h1{
+
+    color: #0077ff;
+
+    text-shadow:
+    0 0 10px #0077ff,
+    0 0 25px #38bdf8,
+    0 0 50px rgba(0,119,255,0.5);
+}
+
+/* TEXTO */
+
+body.light-mode .loader-content p{
+
+    color:
+    rgba(0,0,0,0.65);
+}
+
+/* BARRA */
+
+body.light-mode .loading-bar{
+
+    border:
+    2px solid rgba(0,119,255,0.4);
+
+    background:
+    rgba(255,255,255,0.55);
+}
+
+body.light-mode .loading-fill{
+
+    background:
+    linear-gradient(
+    90deg,
+    #0077ff,
+    #38bdf8,
+    #0077ff);
+
+    box-shadow:
+    0 0 20px rgba(0,119,255,0.5);
+}
+
+/* START */
+
+body.light-mode .press-start{
+
+    color: #0077ff;
+}
+
+/* ===================================
+   MOBILE
+=================================== */
+
+@media(max-width:768px){
+
+    .loader-content h1{
+
+        font-size: 3rem;
+    }
+
+    .loading-bar{
+
+        width: 250px;
+    }
+
+    .press-start{
+
+        font-size: 0.8rem;
+    }
+}
 
 /* RESPONSIVO */
 @media(max-width:768px){
