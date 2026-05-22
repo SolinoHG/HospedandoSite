@@ -1,0 +1,158 @@
+body {
+    background-color: #000;
+    overflow: hidden;
+}
+
+main::after {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-height: 100vh;
+    width: 80vw;
+    background: linear-gradient(-255deg, #000 40%, rgba(0, 0, 0, 0) 65%) no-repeat;
+}
+
+main .jogo {
+    display: none;
+    height: 100vh;
+}
+
+main .jogo.selecionado {
+    display: block;
+}
+
+main .jogo .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.conteudo {
+    position: absolute;
+    top: 0;
+    left: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100vh;
+    max-width: 380px;
+    z-index: 1;
+}
+
+.conteudo .descricao {
+    color: #fff;
+    font-family: "Rubik";
+    line-height: 20px;
+}
+
+.conteudo .logo-expecifica-1 {
+    background-image: url("public/assets/images/logo-space-invaders.png");
+    background-size: cover;
+    margin-bottom: 20px;
+    height: 115px;
+    width: 271px;
+}
+.conteudo .logo-expecifica-2 {
+    background-image: url("public/assets/images/logo-donkey-kong.png");
+    background-size: contain;
+    margin-bottom: 20px;
+    height: 100px;
+    width: 475px;
+}
+.conteudo .logo-expecifica-3 {
+    background-image: url("public/assets/images/logo-mario.png");
+    background-size: cover;
+    margin-bottom: 20px;
+    height: 115px;
+    width: 246px;
+}
+.conteudo .logo-expecifica-4 {
+    background-image: url("public/assets/images/logo-pac-man.png");
+    background-size: cover;
+    margin-bottom: 20px;
+    height: 150px;
+    width: 350px;
+}
+.conteudo .logo-expecifica-5 {
+    background-image: url("public/assets/images/logo-dunk-hunt.png");
+    background-size: cover;
+    margin-bottom: 20px;
+    height: 115px;
+    width: 246px;
+}
+
+.botoes {
+    position: fixed;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 180px;
+    gap: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.imagem-botoes {
+    object-fit: contain;
+    height: 90px;
+    width: 86px;
+    border-radius: 50%;
+    background-color: #111416;
+    padding: 5px;
+}
+
+.ajuste {
+    object-fit: cover;
+    padding: 0px;
+}
+
+.botoes .botao {
+    border: none;
+    background: #000;
+    cursor: pointer;
+    border-radius: 100%;
+}
+
+.botoes .botao.selecionado {
+    transform: scale(1.2);
+    box-shadow: 0 0 10px #D9D9D9;
+}
+
+.back-button{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #ffb100;
+    border: 4px solid #000;
+
+    text-decoration: none;
+
+    box-shadow: 6px 6px 0 #000;
+
+    transition: 0.2s;
+    z-index: 9999;
+}
+
+.back-button span{
+    color: red;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.back-button:hover{
+    transform: translateY(-4px);
+    background: #ffd000;
+}
+
