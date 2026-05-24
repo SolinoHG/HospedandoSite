@@ -37,9 +37,61 @@ body{
 }
 
 /* HEADER */
+/* =========================
+   HEADER NORMAL
+========================= */
+
 .header{
-    text-align:center;
-    padding:50px 20px;
+    text-align: center;
+    padding: 50px 20px;
+
+    transition: 0.5s;
+}
+
+
+/* =========================
+   MODO CLARO
+========================= */
+
+body.light-mode .header{
+
+    background:
+        linear-gradient(
+            rgba(255,255,255,0.10),
+            rgba(255,255,255,0.10)
+        ),
+        url("public/assets/images/aicompensa.gif");
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    border-bottom: 2px solid #ff00ff;
+
+    box-shadow:
+        0 0 30px #00e5ff,
+        0 0 60px #ff00ff;
+}
+
+
+/* =========================
+   TEXTO BRILHANDO
+========================= */
+
+body.light-mode .header h1{
+    color: white;
+
+    text-shadow:
+        0 0 10px #00e5ff,
+        0 0 20px #ff00ff,
+        0 0 40px #00e5ff;
+}
+
+body.light-mode .header p{
+    color: white;
+
+    text-shadow:
+        0 0 10px #000;
 }
 
 .header h1{
