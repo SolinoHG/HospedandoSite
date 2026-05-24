@@ -38,27 +38,26 @@
         <span class="icon">🌙</span>
         <span class="text">Modo Escuro</span>
     </button>
-    
-<div class="mario-block">
 
-    <a href="retro.html" class="retro-link">
-        <img src="public/assets/images/cogumelomario.png" class="mushroom-icon">
-    </a>
+    <!-- BOTÃO RELEMBRE JOGOS ANTIGOS -->
+<a href="retro.html" class="retro-btn">
+     🎤 Relembre Jogos Antigos
+</a>
 
-    <span class="block-icon">❓</span>
 
-</div>
-
-    <button id="music-toggle" class="mario-block">
+<!-- BLOCO MARIO -->
+<button id="music-toggle" class="mario-block">
   <span id="block-icon">?</span>
 </button>
 
+<!-- MUSICA -->
 <audio id="bg-music" loop>
-  <source src="public/assets/audios/ncsmusic.mp3" type="audio/mpeg">
+  <source src="public/assets/audios/introtazercraft.mp3" type="audio/mpeg">
 </audio>
 
+<!-- SOM DA MOEDA -->
 <audio id="coin-sound">
-  <source src="public/assets/audios/ncsmusic.mp3" type="audio/mpeg">
+  <source src="public/assets/audios/musiccoin.mp3" type="audio/mpeg">
 </audio>
 
 </header>
@@ -974,61 +973,91 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 </script>
 
-<script>
-  const musicBtn = document.getElementById("music-toggle");
-  const music = document.getElementById("bg-music");
-  const coinSound = document.getElementById("coin-sound");
-  const icon = document.getElementById("block-icon");
+<script>const musicBtn = document.getElementById("music-toggle");
+const music = document.getElementById("bg-music");
+const coinSound = document.getElementById("coin-sound");
+const icon = document.getElementById("block-icon");
 
-  music.volume = 0.3;
-  coinSound.volume = 0.5;
+music.volume = 0.3;
+coinSound.volume = 0.5;
 
-  function createCoin() {
-    const coin = document.createElement("div");
-    coin.classList.add("coin");
-    coin.innerText = "🪙";
-    musicBtn.appendChild(coin);
+let musicPlaying = false;
+
+/* MOEDA */
+
+function createCoin() {
+  const coin = document.createElement("div");
+
+  coin.classList.add("coin");
+  coin.innerText = "🪙";
+
+  musicBtn.appendChild(coin);
+
+  setTimeout(() => {
+    coin.remove();
+  }, 800);
+}
+
+/* PARTICULAS */
+
+function createParticles() {
+
+  for (let i = 0; i < 6; i++) {
+
+    const particle = document.createElement("div");
+
+    particle.classList.add("particle");
+
+    const x = (Math.random() - 0.5) * 60 + "px";
+    const y = (Math.random() - 0.5) * 60 + "px";
+
+    particle.style.setProperty("--x", x);
+    particle.style.setProperty("--y", y);
+
+    musicBtn.appendChild(particle);
 
     setTimeout(() => {
-      coin.remove();
-    }, 800);
+      particle.remove();
+    }, 600);
   }
+}
 
-  function createParticles() {
-    for (let i = 0; i < 6; i++) {
-      const particle = document.createElement("div");
-      particle.classList.add("particle");
+/* BOTÃO */
 
-      const x = (Math.random() - 0.5) * 60 + "px";
-      const y = (Math.random() - 0.5) * 60 + "px";
+musicBtn.addEventListener("click", () => {
 
-      particle.style.setProperty("--x", x);
-      particle.style.setProperty("--y", y);
+  createCoin();
+  createParticles();
 
-      musicBtn.appendChild(particle);
+  /* SOM MOEDA */
 
-      setTimeout(() => {
-        particle.remove();
-      }, 600);
-    }
+  coinSound.pause();
+  coinSound.currentTime = 0;
+  coinSound.play();
+
+  /* TOGGLE MUSICA */
+
+  if (!musicPlaying) {
+
+    music.play();
+
+    musicBtn.classList.add("active");
+
+    icon.innerText = "♪";
+
+    musicPlaying = true;
+
+  } else {
+
+    music.pause();
+
+    musicBtn.classList.remove("active");
+
+    icon.innerText = "?";
+
+    musicPlaying = false;
   }
-
-  musicBtn.addEventListener("click", () => {
-    createCoin();
-    createParticles();
-    coinSound.currentTime = 0;
-    coinSound.play();
-
-    if (music.paused) {
-      music.play();
-      musicBtn.classList.add("active");
-      icon.innerText = "♪";
-    } else {
-      music.pause();
-      musicBtn.classList.remove("active");
-      icon.innerText = "?";
-    }
-  });
+});
 </script>
 
 <script>

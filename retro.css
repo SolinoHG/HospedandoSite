@@ -156,3 +156,11 @@ main .jogo .imagem {
     background: #ffd000;
 }
 
+body {
+    cursor: url("public/assets/images/bighead.jpg"), auto;
+}
+
+button, a {
+    cursor: url("public/assets/images/bighead.jpg"), pointer;
+}
+

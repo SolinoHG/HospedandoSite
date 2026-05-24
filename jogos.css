@@ -283,9 +283,14 @@ body::after{
   z-index: 999;
 }
 
-body{
-  cursor: url('/public/assets/images/ponteiropc.png'), auto;
+body {
+    cursor: url("public/assets/images/ponteiropc.png"), auto;
 }
+
+button, a {
+    cursor: url("public/assets/images/ponteiropc.png"), pointer;
+}
+
 
 .hero-card {
   transition: 0.3s;
