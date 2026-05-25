@@ -15,6 +15,22 @@ body{
     overflow-x:hidden;
 }
 
+body{
+    opacity: 0;
+    animation: fadeIn 0.5s forwards;
+}
+
+body.fade-out{
+    opacity: 0;
+    transition: 0.5s;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity: 1;
+    }
+}
+
 /* FAZ O CONTEÚDO EMPURRAR O FOOTER */
 .games-container {
     flex: 1;
@@ -2887,6 +2903,131 @@ body.light-mode .press-start{
 
     100%{
         transform: translateX(120%);
+    }
+}
+
+/* =========================
+   RESPONSIVO CELULAR
+========================= */
+
+@media (max-width: 768px){
+
+  body{
+    overflow-x: hidden;
+  }
+
+  /* HEADER */
+
+  .header{
+    padding: 20px 10px;
+    text-align: center;
+  }
+
+  .logo{
+    width: 220px;
+    max-width: 90%;
+  }
+
+  /* BOTÕES HEADER */
+
+  .header-buttons{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  /* PESQUISA */
+
+  .search-box{
+    width: 90%;
+  }
+
+  /* GRID DOS JOGOS */
+
+  .games-grid,
+  .retro-grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 15px;
+  }
+
+  /* CARDS */
+
+  .game-card,
+  .retro-card{
+    width: 100%;
+    max-width: 350px;
+    margin: auto;
+  }
+
+  .game-card img,
+  .retro-card img{
+    width: 100%;
+    height: auto;
+  }
+
+  /* TEXTO */
+
+  h1{
+    font-size: 28px;
+  }
+
+  h2{
+    font-size: 22px;
+  }
+
+  p{
+    font-size: 14px;
+  }
+
+  /* SIDEBAR RETRÔ */
+
+  .retro-sidebar{
+    position: fixed;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    gap: 10px;
+  }
+
+  .retro-sidebar img{
+    width: 45px;
+    height: 45px;
+  }
+
+  /* ÁREA DO MARIO */
+
+  .mario-section{
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .mario-text{
+    width: 100%;
+  }
+
+  /* BOTÕES */
+
+  button,
+  .btn{
+    width: 100%;
+    max-width: 300px;
+  }
+
+}
+
+body{
+    opacity:0;
+    animation:fadeIn .5s forwards;
+    transition:0.5s;
+}
+
+@keyframes fadeIn{
+    to{
+        opacity:1;
     }
 }
 

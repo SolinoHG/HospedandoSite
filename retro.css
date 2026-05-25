@@ -164,3 +164,135 @@ button, a {
     cursor: url("public/assets/images/bighead.jpg"), pointer;
 }
 
+/* =========================
+   RESPONSIVO RETRÔ
+========================= */
+
+@media (max-width: 768px){
+
+    body{
+        overflow-x: hidden;
+    }
+
+    /* JOGO PRINCIPAL */
+
+    .jogos{
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    }
+
+    .jogo .imagem{
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
+    }
+
+    /* ESCURECER FUNDO */
+
+    .jogo::after{
+        width: 100%;
+        background: linear-gradient(
+            0deg,
+            #000 15%,
+            rgba(0,0,0,0.8) 45%,
+            rgba(0,0,0,0.3) 70%,
+            transparent 100%
+        );
+    }
+
+    /* CONTEÚDO TEXTO */
+
+    .conteudo{
+        position: absolute;
+        bottom: 140px;
+        left: 20px;
+
+        width: 90%;
+        max-width: 350px;
+
+        z-index: 2;
+    }
+
+    .descricao{
+        font-size: 14px;
+        line-height: 1.5;
+    }
+
+    /* LOGOS */
+
+    .logo-expecifica-1,
+    .logo-expecifica-2,
+    .logo-expecifica-3,
+    .logo-expecifica-4,
+    .logo-expecifica-5{
+        transform: scale(0.7);
+        transform-origin: left;
+        margin-bottom: 10px;
+    }
+
+    /* BOTÕES LATERAIS */
+
+    .botoes{
+        position: fixed;
+
+        right: 10px;
+        top: 50%;
+
+        transform: translateY(-50%);
+
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+
+        z-index: 10;
+    }
+
+    .botao{
+        width: 55px;
+        height: 55px;
+    }
+
+    .imagem-botoes{
+        width: 28px;
+        height: 28px;
+    }
+
+    /* BOTÃO VOLTAR */
+
+    .back-button{
+        position: fixed;
+
+        top: 15px;
+        left: 15px;
+
+        width: 45px;
+        height: 45px;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 24px;
+
+        z-index: 20;
+    }
+
+}
+
+.back-button{
+    background: #ffb300;
+    color: black;
+
+    border-radius: 10px;
+
+    text-decoration: none;
+
+    box-shadow: 0 0 15px #ffb300;
+
+    transition: 0.3s;
+}
+
+.back-button:hover{
+    transform: scale(1.1);
+}
